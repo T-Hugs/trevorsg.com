@@ -1,0 +1,24 @@
+:root {
+    --primary-1: #0a193e;
+    --primary-2: #1254a1;
+    --primary-3: #269aff;
+    
+    --secondary-1: #201f1e;
+    --secondary-2: #323130;
+    --secondary-3: #605e5c;
+    --secondary-4: #a19f9d;
+    --secondary-5: #e1dfdd;
+
+    --black: #000000;
+    --white: #ffffff;
+
+    --root-background-color: var(--primary-1);
+    --background-color: var(--secondary-5);
+    --link-color: var(--primary-2);
+}
+
+@tailwind base; /* Preflight will be injected here */
+
+@tailwind components;
+
+@tailwind utilities;

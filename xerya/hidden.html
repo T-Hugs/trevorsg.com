@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>cool u can see
+        
+    </title>
+    
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #121212;
+        }
+        .outer {
+            height: 100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .main {
+            background-color: #fff;
+            padding: 20px;
+            border: 3px solid #121212;
+            border-radius: 40px;
+            font-family: Roboto, arial, sans-serif;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .info {
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+        }
+        .info li {
+            margin: 8px 0;
+        }
+        a,a:visited {
+            text-decoration: none;        
+        }
+        a.rainbow {
+            animation: color-change 5s infinite;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: right;
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .skeleton{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            
+        }
+        .skeleton img{
+            width: 20px;
+            height: 20px;
+        }
+        @media screen and (max-width: 1200px) {
+            a {
+                display: inline-block;
+                padding: 8px;
+            }
+        }
+        @media screen and (min-width: 1200px) {
+            body {
+                margin: 0;
+            }
+            .main {
+                width: 960px;
+                margin: 40px auto 0 auto;
+                padding: 50px;
+                border: 3px solid #121212;
+                border-radius: 80px;
+                font-family: Roboto, arial, sans-serif;
+            }
+            .title {
+                text-align: center;
+                font-size: 38px;
+                font-weight: bold;
+            }
+            .subtitle {
+                text-align: center;
+                color: #666;
+                font-size: 24px;
+            }
+            .info {
+                text-align: center;
+                list-style-type: none;
+            }
+            .info li {
+                margin: 8px 0;
+            }
+            .footer {
+                margin-top: 30px;
+                text-align: right;
+            }
+        }
+        @keyframes color-change {
+          0% { color: violet; }
+          15% { color: indigo; }
+          30% { color: blue; }
+          45% { color: green; }
+          60% { color: yellow; }
+          75% { color: orange; }
+          90% { color: red; }
+          100% { color: violet; }
+        }
+              
+        
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="main">
+        <p class="title"> You clicked the skeleton, expecting something; <br/>
+            Even though you're getting nothing. <br/>
+            <u>
+                <!-- change the url below this--> 
+                <a class="rainbow" href="https://youtube.com/c/XeryaGaming" target="_blank"> although check out this video </a> 
+            </u> 
+        </p>
+            </div>
+    <div class="skeleton"> <a href="/xerya"> ◀ BACK TO MAIN PAGE </a>
+    </div>
+</div>
+
+<script>
+    console.log("https://youtube.com/c/XeryaGaming");    
+</script>
+</body>
+</html>

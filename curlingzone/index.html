@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>CurlingZone</title>
+
+        <script type="module">
+            document.documentElement.classList.remove("no-js");
+            document.documentElement.classList.add("js");
+        </script>
+        <link rel="stylesheet" href="tailwind.css" />
+        <link rel="icon" href="favicon.ico" />
+    </head>
+
+    <body>
+        <div id="root" class="flex justify-center bg-primary-400 min-h-screen text-secondary-100 p-2">
+            <div class="container relative lg:max-w-5xl xl:max-w-7xl w-full flex flex-col">
+                <div class="flex items-stretch py-2 flex-1">
+                    <a href="#" class="flex-shrink-0 pr-4"><img class="w-48" src="logo_600x270.png" /></a>
+                    <div class="flex flex-col items-end flex-grow justify-between">
+                        <div class="text-sm">
+                            <a href="#" class="hover:text-secondary-200 hover:underline">Login</a> |
+                            <a href="#" class="hover:text-secondary-200 hover:underline">Sign Up</a>
+                        </div>
+                        <div
+                            id="navBarButton"
+                            class="xl:hidden bg-primary-300 hover:bg-primary-200 px-3 py-1 rounded flex"
+                        >
+                            <button>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-6 w-6"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                        <div
+                            id="nav"
+                            class="justify-end space-x-2 uppercase font-semibold hidden xl:flex right-0 top-0 z-10"
+                        >
+                            <a href="#"
+                                ><div class="bg-primary-300 hover:bg-primary-200 px-3 py-1 rounded flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 mr-2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        />
+                                    </svg>
+                                    Events
+                                </div></a
+                            >
+                            <a href="#"
+                                ><div class="bg-primary-300 hover:bg-primary-200 px-3 py-1 rounded flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 mr-2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        />
+                                    </svg>
+                                    Rankings
+                                </div></a
+                            >
+                            <a href="#"
+                                ><div class="bg-primary-300 hover:bg-primary-200 px-3 py-1 rounded flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 mr-2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                                        />
+                                    </svg>
+                                    Teams
+                                </div></a
+                            >
+                            <a href="#"
+                                ><div class="bg-primary-300 hover:bg-primary-200 px-3 py-1 rounded flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 mr-2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                                        />
+                                    </svg>
+                                    Scores
+                                </div></a
+                            >
+                            <a href="#"
+                                ><div class="bg-primary-300 hover:bg-primary-200 px-3 py-1 rounded flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 mr-2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        />
+                                    </svg>
+                                    Analytics
+                                </div></a
+                            >
+                            <a href="#"
+                                ><div class="bg-primary-300 hover:bg-primary-200 px-3 py-1 rounded flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 mr-2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                                        />
+                                    </svg>
+                                    Shop
+                                </div></a
+                            >
+                            <a href="#"
+                                ><div class="bg-primary-300 hover:bg-primary-200 px-3 py-1 rounded flex justify-between">
+                                    More
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 ml-2"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"
+                                        />
+                                    </svg></div
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-secondary-100 rounded-lg h-full flex flex-grow text-secondary-500 items-start relative">
+                    <div
+                        class="
+                            opacity-30
+                            font-extrabold
+                            text-3xl
+                            pointer-events-none
+                            select-none
+                            absolute
+                            top-0
+                            left-0
+                            text-secondary-100
+                        "
+                        style="transform: rotate(-90deg) translate(-30rem, -3rem); transform-origin: top left"
+                        role="presentation"
+                    >
+                        Everything Curling
+                    </div>
+                    <div id="leftCol" class="w-64 flex-shrink-0 flex-col ml-5 hidden md:flex">
+                        <div
+                            data-content-box-id="1"
+                            class="cb container bg-secondary-200 my-5 mr-5 rounded shadow border border-secondary-300"
+                        >
+                            <h2 class="text-xl m-2 text-primary-400">Box 1-1 Title</h2>
+                            <div class="pl-2"><div class="h-24">Box 1-1 Content</div></div>
+                        </div>
+                        <div
+                            data-content-box-id="2"
+                            class="cb container bg-secondary-200 my-5 mr-5 rounded shadow border border-secondary-300"
+                        >
+                            <h2 class="text-xl m-2 text-primary-400">Box 1-2 Title</h2>
+                            <div class="pl-2"><div class="h-24">Box 1-2 Content</div></div>
+                        </div>
+                    </div>
+                    <div id="centerCol" class="flex-grow mx-3">
+                        <div data-content-box-id="0" class="feature cb bg-primary-300 text-secondary-100 my-5 rounded">
+                            <div class="container py-4 flex p-4">
+                                <h1 class="text-3xl font-thin text-secondary-100 flex-grow">
+                                    Feature event name goes here
+                                </h1>
+                            </div>
+                            <div class="grid grid-cols-scores m-2 p-1 gap-y-1 pb-3">
+                                <div class="contents">
+                                    <div class="bg-primary-100 text-secondary-500 rounded-l text-right flex relative">
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tr-2xl border-t-2 border-r-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end ml-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player1.jpg" />
+                                        </div>
+                                        <div class="w-2 bg-rock-blue border border-secondary-white self-stretch"></div>
+                                    </div>
+                                    <div class="bg-primary-400 text-secondary-100 text-center">
+                                        <div class="flex justify-evenly items-center py-1">
+                                            <div class="text-xl font-semibold">4</div>
+                                            <div class="flex flex-col text-xs font-semibold">
+                                                <div class="uppercase">Final</div>
+                                                <div>(8)</div>
+                                            </div>
+                                            <div class="text-xl font-semibold">6</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-primary-100 text-secondary-500 rounded-r text-left flex relative">
+                                        <div class="w-2 bg-rock-red border border-secondary-white self-stretch"></div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end mr-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tl-2xl border-t-2 border-l-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <div class="bg-primary-100 text-secondary-500 rounded-l text-right flex relative">
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tr-2xl border-t-2 border-r-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end ml-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player1.jpg" />
+                                        </div>
+                                        <div class="w-2 bg-rock-blue border border-secondary-white self-stretch"></div>
+                                    </div>
+                                    <div class="bg-primary-400 text-secondary-100 text-center">
+                                        <div class="flex justify-evenly items-center py-1">
+                                            <div class="text-xl font-semibold">4</div>
+                                            <div class="flex flex-col text-xs font-semibold">
+                                                <div class="uppercase">Final</div>
+                                                <div>(8)</div>
+                                            </div>
+                                            <div class="text-xl font-semibold">6</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-primary-100 text-secondary-500 rounded-r text-left flex relative">
+                                        <div class="w-2 bg-rock-red border border-secondary-white self-stretch"></div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end mr-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tl-2xl border-t-2 border-l-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <div class="bg-primary-100 text-secondary-500 rounded-l text-right flex relative">
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tr-2xl border-t-2 border-r-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end ml-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player1.jpg" />
+                                        </div>
+                                        <div class="w-2 bg-rock-blue border border-secondary-white self-stretch"></div>
+                                    </div>
+                                    <div class="bg-primary-400 text-secondary-100 text-center">
+                                        <div class="flex justify-evenly items-center py-1">
+                                            <div class="text-xl font-semibold">4</div>
+                                            <div class="flex flex-col text-xs font-semibold">
+                                                <div class="uppercase">Final</div>
+                                                <div>(8)</div>
+                                            </div>
+                                            <div class="text-xl font-semibold">6</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-primary-100 text-secondary-500 rounded-r text-left flex relative">
+                                        <div class="w-2 bg-rock-red border border-secondary-white self-stretch"></div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end mr-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tl-2xl border-t-2 border-l-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <div class="bg-primary-100 text-secondary-500 rounded-l text-right flex relative">
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tr-2xl border-t-2 border-r-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end ml-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player1.jpg" />
+                                        </div>
+                                        <div class="w-2 bg-rock-blue border border-secondary-white self-stretch"></div>
+                                    </div>
+                                    <div class="bg-primary-400 text-secondary-100 text-center">
+                                        <div class="flex justify-evenly items-center py-1">
+                                            <div class="text-xl font-semibold">4</div>
+                                            <div class="flex flex-col text-xs font-semibold">
+                                                <div class="uppercase">Final</div>
+                                                <div>(8)</div>
+                                            </div>
+                                            <div class="text-xl font-semibold">6</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-primary-100 text-secondary-500 rounded-r text-left flex relative">
+                                        <div class="w-2 bg-rock-red border border-secondary-white self-stretch"></div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end mr-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tl-2xl border-t-2 border-l-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <div class="bg-primary-100 text-secondary-500 rounded-l text-right flex relative">
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tr-2xl border-t-2 border-r-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end ml-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player1.jpg" />
+                                        </div>
+                                        <div class="w-2 bg-rock-blue border border-secondary-white self-stretch"></div>
+                                    </div>
+                                    <div class="bg-primary-400 text-secondary-100 text-center">
+                                        <div class="flex justify-evenly items-center py-1">
+                                            <div class="text-xl font-semibold">4</div>
+                                            <div class="flex flex-col text-xs font-semibold">
+                                                <div class="uppercase">Final</div>
+                                                <div>(8)</div>
+                                            </div>
+                                            <div class="text-xl font-semibold">6</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-primary-100 text-secondary-500 rounded-r text-left flex relative">
+                                        <div class="w-2 bg-rock-red border border-secondary-white self-stretch"></div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end mr-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tl-2xl border-t-2 border-l-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <div class="bg-primary-100 text-secondary-500 rounded-l text-right flex relative">
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tr-2xl border-t-2 border-r-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end ml-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player1.jpg" />
+                                        </div>
+                                        <div class="w-2 bg-rock-blue border border-secondary-white self-stretch"></div>
+                                    </div>
+                                    <div class="bg-primary-400 text-secondary-100 text-center">
+                                        <div class="flex justify-evenly items-center py-1">
+                                            <div class="text-xl font-semibold">4</div>
+                                            <div class="flex flex-col text-xs font-semibold">
+                                                <div class="uppercase">Final</div>
+                                                <div>(8)</div>
+                                            </div>
+                                            <div class="text-xl font-semibold">6</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-primary-100 text-secondary-500 rounded-r text-left flex relative">
+                                        <div class="w-2 bg-rock-red border border-secondary-white self-stretch"></div>
+                                        <div class="min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-player object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm xl:text-base">Last Name</div>
+                                            <div class="text-sm">First Name</div>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end mr-1 text-left hidden lg:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tl-2xl border-t-2 border-l-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-content-box-id="0" class="feature cb bg-primary-300 text-secondary-100 my-5 rounded">
+                            <div class="container py-4 flex p-4">
+                                <h1 class="text-3xl font-thin text-secondary-100 flex-grow">
+                                    Feature doubles event name goes here
+                                </h1>
+                            </div>
+                            <div class="grid grid-cols-scores m-2 p-1 gap-y-1 pb-3">
+                                <div class="contents">
+                                    <div class="bg-primary-100 text-secondary-500 rounded-l text-right flex relative">
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tr-2xl border-t-2 border-r-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end ml-1 text-left hidden xl:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm">Last Name</div>
+                                            <div class="font-bold text-sm">Last Name</div>
+                                        </div>
+                                        <div class="ml-1 -mr-1 min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-doublesPlayer transform -translate-y-2 z-10 rounded-lg object-contain" src="player1.jpg" />
+                                            <img class="w-doublesPlayer transform translate-y-2 -translate-x-2 rounded-lg object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="w-2 bg-rock-blue border border-secondary-white self-stretch"></div>
+                                    </div>
+                                    <div class="bg-primary-400 text-secondary-100 text-center">
+                                        <div class="flex justify-evenly items-center py-1">
+                                            <div class="text-xl font-semibold">4</div>
+                                            <div class="flex flex-col text-xs font-semibold">
+                                                <div class="uppercase">Final</div>
+                                                <div>(8)</div>
+                                            </div>
+                                            <div class="text-xl font-semibold">6</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-primary-100 text-secondary-500 rounded-r text-left flex relative">
+                                        <div class="w-2 bg-rock-red border border-secondary-white self-stretch"></div>
+                                        <div class="ml-1 -mr-1 min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-doublesPlayer transform -translate-y-2 z-10 rounded-lg object-contain" src="player1.jpg" />
+                                            <img class="w-doublesPlayer transform translate-y-2 -translate-x-2 rounded-lg object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm">Last Name</div>
+                                            <div class="font-bold text-sm">Last Name</div>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end mr-1 text-left hidden xl:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tl-2xl border-t-2 border-l-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contents">
+                                    <div class="bg-primary-100 text-secondary-500 rounded-l text-right flex relative">
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tr-2xl border-t-2 border-r-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end ml-1 text-left hidden xl:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm">Last Name</div>
+                                            <div class="font-bold text-sm">Last Name</div>
+                                        </div>
+                                        <div class="ml-1 -mr-1 min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-doublesPlayer transform -translate-y-2 z-10 rounded-lg object-contain" src="player1.jpg" />
+                                            <img class="w-doublesPlayer transform translate-y-2 -translate-x-2 rounded-lg object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="w-2 bg-rock-blue border border-secondary-white self-stretch"></div>
+                                    </div>
+                                    <div class="bg-primary-400 text-secondary-100 text-center">
+                                        <div class="flex justify-evenly items-center py-1">
+                                            <div class="text-xl font-semibold">4</div>
+                                            <div class="flex flex-col text-xs font-semibold">
+                                                <div class="uppercase">Final</div>
+                                                <div>(8)</div>
+                                            </div>
+                                            <div class="text-xl font-semibold">6</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-primary-100 text-secondary-500 rounded-r text-left flex relative">
+                                        <div class="w-2 bg-rock-red border border-secondary-white self-stretch"></div>
+                                        <div class="ml-1 -mr-1 min-w-player hidden lg:flex lg:items-center">
+                                            <img class="w-doublesPlayer transform -translate-y-2 z-10 rounded-lg object-contain" src="player1.jpg" />
+                                            <img class="w-doublesPlayer transform translate-y-2 -translate-x-2 rounded-lg object-contain" src="player2.jpg" />
+                                        </div>
+                                        <div class="flex flex-col justify-center mx-1">
+                                            <div class="font-bold text-sm">Last Name</div>
+                                            <div class="font-bold text-sm">Last Name</div>
+                                        </div>
+                                        <div class="self-center mx-1 flex-grow flex items-center justify-center">
+                                            <div
+                                                class="
+                                                    uppercase
+                                                    text-xs
+                                                    border-accent-1 border
+                                                    text-accent-1
+                                                    font-semibold
+                                                    hidden
+                                                    xl:block
+                                                "
+                                            >
+                                                wat
+                                            </div>
+                                        </div>
+                                        <div class="text-xs self-end mr-1 text-left hidden xl:block">
+                                            <a href="#">Edmonton</a>
+                                        </div>
+                                        <div class="flex flex-col justify-between">
+                                            <div class="uppercase text-xs text-accent-1 font-semibold p-1">Live</div>
+                                            <div>
+                                                <img
+                                                    class="w-8 rounded-tl-2xl border-t-2 border-l-2 border-primary-300"
+                                                    alt="Flag - Canada"
+                                                    src="flag-can.gif"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            data-content-box-id="4"
+                            class="cb feature container bg-secondary-200 my-5 mr-5 rounded shadow border border-secondary-300"
+                        >
+                            <h2 class="text-xl m-2 text-primary-400">More featured content</h2>
+                            <div class="h-32 m-2">Lorem ipsum dolor sit amet...</div>
+                        </div>
+                    </div>
+                    <div id="rightCol" class="w-64 flex-shrink-0 flex-col mr-5 hidden xl:flex">
+                        <div
+                            data-content-box-id="3"
+                            class="cb container bg-secondary-200 my-5 mr-5 rounded shadow border border-secondary-300"
+                        >
+                            <h2 class="text-xl m-2 text-primary-400">Latest headlines</h2>
+                            <div class="pl-2">
+                                <ul class="pr-2">
+                                    <li class="flex mb-3 items-start">
+                                        <img class="w-16 mr-2 mt-2" src="headline1.png" alt="Headline thumbnail" />
+                                        <div>
+                                            <a href="#" class="hover:text-primary-300"
+                                                >CurlingZone Launches Curling Stadium Streaming Platform</a
+                                            >
+                                        </div>
+                                    </li>
+
+                                    <li class="flex mb-3 items-start">
+                                        <img class="w-16 mr-2 mt-2" src="headline2.jpg" alt="Headline thumbnail" />
+                                        <div>
+                                            <a href="#" class="hover:text-primary-300"
+                                                >Switzerland Defeat RCF to Claim World Women's Title</a
+                                            >
+                                        </div>
+                                    </li>
+
+                                    <li class="flex mb-3 items-start">
+                                        <img class="w-16 mr-2 mt-2" src="headline3.jpg" alt="Headline thumbnail" />
+                                        <div>
+                                            <a href="#" class="hover:text-primary-300"
+                                                >2021 Worlds a Long Time Coming for Team Einarson</a
+                                            >
+                                        </div>
+                                    </li>
+
+                                    <li class="flex mb-3 items-start">
+                                        <img class="w-16 mr-2 mt-2" src="headline4.jpg" alt="Headline thumbnail" />
+                                        <div>
+                                            <a href="#" class="hover:text-primary-300"
+                                                >Team Canada off to Strong Start at Men's Worlds</a
+                                            >
+                                        </div>
+                                    </li>
+
+                                    <li class="flex mb-3 items-start">
+                                        <img class="w-16 mr-2 mt-2" src="headline5.jpg" alt="Headline thumbnail" />
+                                        <div>
+                                            <a href="#" class="hover:text-primary-300"
+                                                >Carey and Hodgson Speak Out About Mixed Doubles Qualification
+                                                Process</a
+                                            >
+                                        </div>
+                                    </li>
+
+                                    <li class="flex mb-3 items-start">
+                                        <img class="w-16 mr-2 mt-2" src="headline6.jpg" alt="Headline thumbnail" />
+                                        <div>
+                                            <a href="#" class="hover:text-primary-300"
+                                                >Einarson and Gushue Claim 2021 Canadian Mixed Doubles Gold</a
+                                            >
+                                        </div>
+                                    </li>
+
+                                    <li class="flex mb-3 items-start">
+                                        <img class="w-16 mr-2 mt-2" src="headline7.jpg" alt="Headline thumbnail" />
+                                        <div>
+                                            <a href="#" class="hover:text-primary-300"
+                                                >Bottcher Beats Koe to Win First Career Brier</a
+                                            >
+                                        </div>
+                                    </li>
+
+                                    <li class="flex mb-3 items-start">
+                                        <img class="w-16 mr-2 mt-2" src="headline8.jpg" alt="Headline thumbnail" />
+                                        <div>
+                                            <a href="#" class="hover:text-primary-300"
+                                                >Broom Slamming Incident Causes Stir</a
+                                            >
+                                        </div>
+                                    </li>
+
+                                    <li class="flex flex-col items-center">
+                                        <a href="#" class="font-bold hover:text-primary-300">See more...</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div
+                            data-content-box-id="4"
+                            class="cb container bg-secondary-200 my-5 mr-5 rounded shadow border border-secondary-300"
+                        >
+                            <h2 class="text-xl m-2 text-primary-400">Box 2-2 Title</h2>
+                            <div class="pl-2"><div class="h-24">Box 2-2 Content</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div>Footer</div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
