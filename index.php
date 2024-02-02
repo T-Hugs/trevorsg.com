@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="GENERATOR" content="Microsoft FrontPage 1.0" />
     <meta name="description" content="Personal website of Trevor Gau" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>Trevor Gau</title>
 
     <script>
