@@ -177,7 +177,7 @@
             Download Resume (pdf)
           </a>
           <h2 class="text-3xl font-bold mb-4 mt-8">References</h2>
-          <div class="flex justify-between gap-6">
+          <div class="flex justify-between gap-6 flex-wrap">
             <div class="bg-gray-800 flex-1 rounded-lg p-4">
               <h3 class="text-xl font-semibold">Sean Lumley</h3>
               <div class="text-gray-400 flex flex-col">
@@ -238,7 +238,7 @@
         </section>
         <section>
           <h2 class="text-3xl font-bold mb-4">Links</h2>
-          <ul class="flex gap-4 list-none ps-0">
+          <ul class="flex gap-4 list-none ps-0 flex-wrap">
             <li>
               <a
                 href="https://www.linkedin.com/in/trevor-gau-1a662410"
@@ -273,11 +273,16 @@
             </li>
           </ul>
         </section>
-        <p class="max-w-sm self-center text-center bg-blue-950 p-6 border rounded-xl text-gray-200"><strong>Thank you</strong> for taking the time to consider my application. I look forward to hearing from you soon!</p>
+        <p
+          class="max-w-sm self-center text-center bg-blue-950 p-6 border rounded-xl text-gray-200"
+        >
+          <strong>Thank you</strong> for taking the time to consider my
+          application. I look forward to hearing from you soon!
+        </p>
       </main>
     </div>
     <div
-      class="tenor-gif-embed hidden !absolute z-20 border-2 border-black pointer-events-none max-w-lg"
+      class="tenor-gif-embed hidden !absolute z-20 border-2 border-black pointer-events-none max-w-100vw lg:max-w-lg"
       data-postid="12014506"
       data-share-method="host"
       data-aspect-ratio="1.33333"
@@ -285,7 +290,7 @@
       id="pgBlindsGif"
     ></div>
     <div
-      class="hidden absolute z-20 border-2 border-black pointer-events-none max-w-lg"
+      class="hidden absolute z-20 border-2 border-black pointer-events-none max-w-100vw lg:max-w-lg"
       id="exerciseImage"
     >
       <img
@@ -305,9 +310,12 @@
       const exerciseImage = document.getElementById("exerciseImage");
       pgAbbr.addEventListener("mouseenter", () => {
         const pos = pgAbbr.getBoundingClientRect();
-        pgBlinds.style.top = `${pos.bottom + window.scrollY + 2}px`;
-        pgBlinds.style.left = `${pos.left + window.scrollX}px`;
         pgBlinds.classList.remove("hidden");
+        const imageBounding = pgBlinds.getBoundingClientRect();
+        // Center the image horizontally on the screen
+        pgBlinds.style.left = `${
+          window.innerWidth / 2 - imageBounding.width / 2}px`;
+        pgBlinds.style.top = `${pos.bottom + window.scrollY + 2}px`;
       });
       pgAbbr.addEventListener("mouseleave", () => {
         pgBlinds.classList.add("hidden");
@@ -320,9 +328,12 @@
 
       exerciseAbbr.addEventListener("mouseenter", () => {
         const pos = exerciseAbbr.getBoundingClientRect();
-        exerciseImage.style.top = `${pos.bottom + window.scrollY + 2}px`;
-        exerciseImage.style.left = `${pos.left + window.scrollX}px`;
         exerciseImage.classList.remove("hidden");
+        const imageBounding = exerciseImage.getBoundingClientRect();
+        // Center the image horizontally on the screen
+        exerciseImage.style.left = `${
+          window.innerWidth / 2 - imageBounding.width / 2}px`;
+        exerciseImage.style.top = `${pos.bottom + window.scrollY + 2}px`;
       });
       exerciseAbbr.addEventListener("mouseleave", () => {
         exerciseImage.classList.add("hidden");
