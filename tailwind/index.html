@@ -279,6 +279,15 @@
           <strong>Thank you</strong> for taking the time to consider my
           application. I look forward to hearing from you soon!
         </p>
+        <p
+          class="text-sm text-gray-300 text-center max-w-lg self-center leading-relaxed pt-6 border-t border-gray-400"
+        >
+          This application was prepared without the use of AI. I believe AI
+          tools like Chat-GPT and Co-Pilot are extremely valuable to the
+          development process, and I use them to improve my velocity. However
+          for this application I wanted you to get the best possible picture of
+          me.
+        </p>
       </main>
     </div>
     <div
@@ -314,7 +323,8 @@
         const imageBounding = pgBlinds.getBoundingClientRect();
         // Center the image horizontally on the screen
         pgBlinds.style.left = `${
-          window.innerWidth / 2 - imageBounding.width / 2}px`;
+          window.innerWidth / 2 - imageBounding.width / 2
+        }px`;
         pgBlinds.style.top = `${pos.bottom + window.scrollY + 2}px`;
       });
       pgAbbr.addEventListener("mouseleave", () => {
@@ -332,7 +342,8 @@
         const imageBounding = exerciseImage.getBoundingClientRect();
         // Center the image horizontally on the screen
         exerciseImage.style.left = `${
-          window.innerWidth / 2 - imageBounding.width / 2}px`;
+          window.innerWidth / 2 - imageBounding.width / 2
+        }px`;
         exerciseImage.style.top = `${pos.bottom + window.scrollY + 2}px`;
       });
       exerciseAbbr.addEventListener("mouseleave", () => {
