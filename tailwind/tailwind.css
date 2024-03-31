@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        @apply text-lg;
+    }
     abbr {
         @apply underline cursor-default decoration-dotted decoration-yellow-400;
     }
@@ -10,7 +13,7 @@
         @apply text-blue-300 hover:text-blue-400;
     }
     p {
-        @apply text-lg mb-4;
+        @apply mb-4;
     }
     ul {
         @apply list-disc ps-4 mb-4;
