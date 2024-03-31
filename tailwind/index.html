@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trevor Gau, Tailwind Application</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body
+    class="bg-gray-900 text-gray-100 min-h-screen flex flex-col items-center justify-center p-5 bg-gradient-to-br from-gray-800 via-gray-900 to-slate-900"
+  >
+    <div
+      class="bg-gray-700 max-w-4xl w-full flex flex-col p-12 rounded-[32px] border border-gray-500 shadow shadow-gray-700"
+    >
+      <header class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2">Trevor Gau</h1>
+        <p class="text-xl">Software Engineer</p>
+      </header>
+      <main class="w-full flex flex-col gap-6">
+        <section class="mb-6">
+          <h2 class="text-3xl font-bold mb-4">Let's Build Tailwind</h2>
+          <p>
+            We've seen the memes:
+            <abbr
+              id="pgBlindsAbbr"
+              title="Double-click to open the gif in a new tab."
+              >the <span class="[font-variant:small-caps]">gif</span></abbr
+            >
+            of Peter Griffin's fruitless attempt to adjust the window blinds,
+            the
+            <span class="whitespace-nowrap"
+              ><span
+                class="pl-1 -ml-1 pr-[0.4em] -mr-[0.4em] outline outline-1 -outline-offset-[0.125em] inline-block whitespace-nowrap"
+                >CSS Is Awes</span
+              >ome</span
+            >
+            <!-- 
+                Getting this to look right and layout correctly was a bit of a puzzle in itself!
+                I wanted to ensure it looked correct on any screen size without a line break showing. 
+                I also wanted to see if I could avoid coupling the font size into a hard-coded value.
+                
+                My initial solution involved an absolutely-positioned div with a border, but this didn't
+                work well with the text wrapping. The best solution would have to integrate with the flow
+                of the text. A span around the whole thing with whitespace-nowrap did the trick.
+                
+                The right-padding pushes out the border just enough to overlap the next character, 
+                while the negative right margin pulls the subsequent text back to the correct position.
+            -->
+            coffee mug, and several others. But to me, these challenges are just
+            puzzles, and I love puzzles!
+          </p>
+          <p>
+            As a happy Tailwind user myself, I look forward to bringing over 10
+            years of web UI engineering experience to the team. I have looked
+            into the newer projects, HeadlessUI and TailwindUI, and I'm already
+            excited about the idea of contributing.
+          </p>
+
+          <p>
+            <strong>At GitHub I worked on</strong> the Primer design system.
+            Upon joining, it was mostly a design library, with behaviors and
+            interactions
+            <abbr
+              id="readerExercise"
+              title="Double-click to open the image in a new tab."
+              >left as an exercise for the reader</abbr
+            >. I pushed for a headless behaviors library that could be easily
+            integrated into the design components, removing the onus on the user
+            to wire up behaviors themselves. I started off by building 3
+            widely-used behaviors and checked them into what is now the
+            <a href="https://github.com/primer/behaviors" target="_blank"
+              >Primer Behaviors library</a
+            >. Then I gave those behaviors a thin React hook to bring them into
+            React-Land, where most future GitHub UI would live.
+          </p>
+          <p>
+            <strong>At Microsoft I worked on</strong> the Azure DevOps design
+            system, a fully-featured component library written in React,
+            powering the entire Azure DevOps frontend. In this role I developed
+            an enthusiasm for performant DOM manipulation and uncompromising
+            accessibility features.
+          </p>
+          <p>
+            <strong>I have served on the board and as president</strong>, both
+            volunteer roles, of Triangle Curling Club, a local non-profit sports
+            organization with over 350 members. I picked up many leadership
+            strategies in these positions, principally based on clear
+            communication and expectation setting.
+          </p>
+          <p>
+            <strong>Contributing to open-source</strong> was a standard part of
+            my roles at GitHub and Microsoft. I've also been able to open-source
+            some of my side projects for the curling community. Here are some
+            contributions I'm proud of:
+          </p>
+          <ul>
+            <li>
+              Primer Behaviors
+              <a
+                target="_blank"
+                href="https://github.com/primer/behaviors/blob/main/src/focus-zone.ts"
+                >Focus Zone</a
+              >
+              and
+              <a
+                target="_blank"
+                href="https://github.com/primer/behaviors/blob/main/src/anchored-position.ts"
+                >Anchored Position</a
+              >. Focus Zone is a great example of some of my best work.
+            </li>
+            <li>
+              <a
+                href="https://github.com/T-Hugs/headless-curling-timer/blob/main/lib/headless-curling-timer.ts"
+                target="_blank"
+                >Headless Curling Timer</a
+              >, a library that implements the official game timing rules for
+              the sport of curling and
+              <a
+                href="https://github.com/trianglecurling/js-curling-scoreboard"
+                target="_blank"
+                class="whitespace-nowrap"
+                >JS Curling Scoreboard</a
+              >, a library that renders a curling scoreboard from a data
+              structure. Once I'm closer to a release, I will open-source the UI
+              components of my latest curling project,
+              <a href="https://eyeontheclock.com">Eye on the Clock</a>.
+            </li>
+            <li>
+              <a href="https://github.com/microsoft/tfs-cli" target="_blank"
+                >TFS-CLI</a
+              >, the utility that is used to package and publish first- and
+              third-party extensions to Azure DevOps.
+            </li>
+          </ul>
+          <p>
+            <strong>Technical documentation</strong> was also a big part of
+            these open-source contributions. See the following examples of my
+            technical writing:
+          </p>
+          <ul>
+            <li>
+              <a
+                target="_blank"
+                href="https://github.com/primer/behaviors/blob/main/docs/focus-zone.md"
+                >Focus Zone Readme</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://github.com/primer/react/blob/main/contributor-docs/behaviors.md"
+                >Architectural Decision Record: Implementing Behaviors in Primer
+                Components</a
+              >
+            </li>
+            <li>
+              And even though it's still open, this
+              <a
+                href="https://issues.chromium.org/issues/40736701"
+                target="_blank"
+                >Chromium Bug</a
+              >
+            </li>
+          </ul>
+          <p>
+            <strong>My experience</strong>, built on top of a solid foundation
+            from a degree in computer science, will enable me to ramp quickly
+            and start contributing to Tailwind right away. I'm excited about
+            contributing to such a great library.
+          </p>
+          <a
+            href="https://trevorsg.com/resume.pdf"
+            download="gau-resume.pdf"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 inline-block mt-4 px-4 rounded transition duration-300 ease-in-out"
+          >
+            Download Resume (pdf)
+          </a>
+          <h2 class="text-3xl font-bold mb-4 mt-8">References</h2>
+          <div class="flex justify-between gap-6">
+            <div class="bg-gray-800 flex-1 rounded-lg p-4">
+              <h3 class="text-xl font-semibold">Sean Lumley</h3>
+              <div class="text-gray-400 flex flex-col">
+                <p class="italic">
+                  Principal Software Engineer, <br />Microsoft
+                </p>
+                <p>
+                  <a
+                    class="text-blue-500 underline"
+                    href="mailto:slumley@microsoft.com"
+                    >slumley@microsoft.com</a
+                  >
+                </p>
+                <p class="mt-4">
+                  Co-worker for nearly 8 years across multiple teams
+                </p>
+              </div>
+            </div>
+            <div class="bg-gray-800 flex-1 rounded-lg p-4">
+              <h3 class="text-xl font-semibold">Kathy Jackson</h3>
+              <div class="text-gray-400 flex flex-col">
+                <p class="italic">Founding member, <br />Triangle Curling</p>
+                <p>
+                  <a
+                    class="text-blue-500 underline"
+                    href="mailto:mkjackson@nc.rr.com"
+                    >mkjackson@nc.rr.com</a
+                  >
+                </p>
+                <p class="mt-4">Fellow board member at Triangle Curling</p>
+              </div>
+            </div>
+            <div class="bg-gray-800 flex-1 rounded-lg p-4">
+              <h3 class="text-xl font-semibold">David Wilson</h3>
+              <div class="text-gray-400 flex flex-col">
+                <p class="italic">Senior software engineer, <br />GitHub</p>
+                <p>
+                  <a
+                    class="text-blue-500 underline"
+                    href="mailto:mkjackson@nc.rr.com"
+                    >dwilson@dwilson.org</a
+                  >
+                </p>
+                <p class="mt-4">Friend and former colleague</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 class="text-3xl font-bold mb-4">Links</h2>
+          <ul class="flex gap-4 list-none ps-0">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/trevor-gau-1a662410"
+                target="_blank"
+                class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/t-hugs"
+                target="_blank"
+                class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://trevorsg.com/"
+                target="_blank"
+                class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+                >Personal Website</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://eyeontheclock.com/"
+                target="_blank"
+                class="bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+                >Eye on the Clock</a
+              >
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <div
+      class="tenor-gif-embed hidden !absolute z-20 border-2 border-black pointer-events-none max-w-lg"
+      data-postid="12014506"
+      data-share-method="host"
+      data-aspect-ratio="1.33333"
+      data-width="100%"
+      id="pgBlindsGif"
+    >
+      <a
+        href="https://tenor.com/view/family-guy-css-open-window-annoyed-pissed-gif-12014506"
+        >Family Guy Css GIF</a
+      >from
+      <a href="https://tenor.com/search/family+guy-gifs">Family Guy GIFs</a>
+    </div>
+    <div
+      class="hidden absolute z-20 border-2 border-black pointer-events-none max-w-lg"
+      id="exerciseImage"
+    >
+      <img
+        src="https://i.imgflip.com/7fwenu.jpg"
+        alt="Meme showing a car, labeled 'Math textbooks', speeding off in the direction 'Leave as an exercise for the reader', abandoning the path of 'Provide fully worked solutions'."
+      />
+    </div>
+    <script
+      type="text/javascript"
+      async
+      src="https://tenor.com/embed.js"
+    ></script>
+    <script>
+      const pgAbbr = document.getElementById("pgBlindsAbbr");
+      const exerciseAbbr = document.getElementById("readerExercise");
+      const pgBlinds = document.getElementById("pgBlindsGif");
+      const exerciseImage = document.getElementById("exerciseImage");
+      pgAbbr.addEventListener("mouseenter", () => {
+        const pos = pgAbbr.getBoundingClientRect();
+        pgBlinds.style.top = `${pos.bottom + window.scrollY + 2}px`;
+        pgBlinds.style.left = `${pos.left + window.scrollX}px`;
+        pgBlinds.classList.remove("hidden");
+      });
+      pgAbbr.addEventListener("mouseleave", () => {
+        pgBlinds.classList.add("hidden");
+      });
+      pgAbbr.addEventListener("dblclick", () => {
+        window.open(
+          "https://tenor.com/view/family-guy-css-open-window-annoyed-pissed-gif-12014506"
+        );
+      });
+
+      exerciseAbbr.addEventListener("mouseenter", () => {
+        const pos = exerciseAbbr.getBoundingClientRect();
+        exerciseImage.style.top = `${pos.bottom + window.scrollY + 2}px`;
+        exerciseImage.style.left = `${pos.left + window.scrollX}px`;
+        exerciseImage.classList.remove("hidden");
+      });
+      exerciseAbbr.addEventListener("mouseleave", () => {
+        exerciseImage.classList.add("hidden");
+      });
+      exerciseAbbr.addEventListener("dblclick", () => {
+        window.open("https://i.imgflip.com/7fwenu.jpg");
+      });
+    </script>
+  </body>
+</html>
