@@ -31,7 +31,7 @@
         const chicken = document.createElement("div");
         chicken.setAttribute("role", "presentation");
         chicken.classList.add("party-chicken");
-        chicken.innerHTML = Math.random() < 0.2 ? "✨" : "🐔";
+        chicken.innerHTML = Math.random() < 0.2 ? "✨" : "🐿️";
         chicken.style.position = "fixed";
         chicken.style.left = Math.random() * 100 + "%";
         chicken.style.top = "-150px";
@@ -164,7 +164,7 @@
       <p class="title">I am Trevor Gau</p>
       <p class="subtitle">
         I am really good at websites.<br />I am <em>not</em> looking for
-        work.<br /><span role="button" id="chicken">🐔</span>
+        work.<br /><span role="button" id="chicken">🐿️</span>
       </p>
 
       <ul class="info">
