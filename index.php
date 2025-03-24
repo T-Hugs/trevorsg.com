@@ -213,8 +213,13 @@
           >
         </li>
         <li>
-          <a href="https://twitter.com/trevorsg" rel="nofollow" target="_blank"
-            >twitter</a
+          <a href="https://instagram.com/magicaltrevorsg" rel="nofollow" target="_blank"
+            >insta</a
+          >
+        </li>
+        <li>
+          <a href="https://x.com/trevorsg" rel="nofollow" target="_blank"
+            >𝕏</a
           >
         </li>
       </ul>
