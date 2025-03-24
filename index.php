@@ -13,8 +13,37 @@
     <title>Trevor Gau</title>
 
     <script>
+      function getDailyRandomEmoji() {
+        // Pool of 20 fun emojis
+        const emojiPool = [
+            '😀', '😂', '🤓', '😎', '🥳',
+            '🎉', '🐱', '🐶', '🦄', '🌈',
+            '🍕', '🍔', '🍦', '🌟', '✨',
+            '🚀', '🎸', '🎮', '🏀', '⚽'
+        ];
+
+        // Get current date (year, month, day)
+        const now = new Date();
+        // Create a seed from the date (ignoring time)
+        const dateSeed = now.getFullYear() * 10000 + 
+                    (now.getMonth() + 1) * 100 + 
+                    now.getDate();
+    
+        // Simple deterministic random number generator using the date as seed
+        function seededRandom(seed) {
+            const x = Math.sin(seed) * 10000;
+            return x - Math.floor(x);
+        }
+
+        // Get index based on seeded random
+        const index = Math.floor(seededRandom(dateSeed) * emojiPool.length);
+    
+        return emojiPool[index];
+      }
+      const emoji = getDailyRandomEmoji();
       document.addEventListener("DOMContentLoaded", () => {
         const chickenButton = document.getElementById("chicken");
+        chickenButton.innerHTML = emoji;
         chickenButton.addEventListener("click", chickenParty);
       });
 
@@ -31,7 +60,7 @@
         const chicken = document.createElement("div");
         chicken.setAttribute("role", "presentation");
         chicken.classList.add("party-chicken");
-        chicken.innerHTML = Math.random() < 0.2 ? "✨" : "🐿️";
+        chicken.innerHTML = Math.random() < 0.2 ? "✨" : emoji;
         chicken.style.position = "fixed";
         chicken.style.left = Math.random() * 100 + "%";
         chicken.style.top = "-150px";
@@ -164,7 +193,7 @@
       <p class="title">I am Trevor Gau</p>
       <p class="subtitle">
         I am really good at websites.<br />I am <em>not</em> looking for
-        work.<br /><span role="button" id="chicken">🐿️</span>
+        work.<br /><span role="button" id="chicken"></span>
       </p>
 
       <ul class="info">
