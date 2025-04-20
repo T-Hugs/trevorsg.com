@@ -15,12 +15,12 @@
     <script>
       function getDailyRandomEmoji() {
         // Pool of 20 fun emojis
-        const emojiPool = [
+        const emojiPool = ['🎂'] || [
             '😀', '😂', '🤓', '😎', '🥳',
             '🎉', '🐱', '🐶', '🦄', '🌈',
             '🍕', '🍔', '🍦', '🌟', '🐔',
             '🚀', '🎸', '🎮', '🏀', '🐿️'
-        ] || ['🎂'];
+        ];
 
         // Get current date (year, month, day)
         const now = new Date();
