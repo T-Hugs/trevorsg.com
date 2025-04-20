@@ -20,7 +20,7 @@
             '🎉', '🐱', '🐶', '🦄', '🌈',
             '🍕', '🍔', '🍦', '🌟', '🐔',
             '🚀', '🎸', '🎮', '🏀', '🐿️'
-        ];
+        ] || ['🎂'];
 
         // Get current date (year, month, day)
         const now = new Date();
@@ -60,7 +60,7 @@
         const chicken = document.createElement("div");
         chicken.setAttribute("role", "presentation");
         chicken.classList.add("party-chicken");
-        chicken.innerHTML = Math.random() < 0.2 ? "✨" : emoji;
+        chicken.innerHTML = Math.random() < 0.2 ? "🎉" : emoji;
         chicken.style.position = "fixed";
         chicken.style.left = Math.random() * 100 + "%";
         chicken.style.top = "-150px";
