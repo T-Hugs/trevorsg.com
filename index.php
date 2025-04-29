@@ -15,7 +15,7 @@
     <script>
       function getDailyRandomEmoji() {
         // Pool of 20 fun emojis
-        const emojiPool = ['🎂'] || [
+        const emojiPool = [
             '😀', '😂', '🤓', '😎', '🥳',
             '🎉', '🐱', '🐶', '🦄', '🌈',
             '🍕', '🍔', '🍦', '🌟', '🐔',
@@ -60,7 +60,7 @@
         const chicken = document.createElement("div");
         chicken.setAttribute("role", "presentation");
         chicken.classList.add("party-chicken");
-        chicken.innerHTML = Math.random() < 0.2 ? "🎉" : emoji;
+        chicken.innerHTML = Math.random() < 0.2 ? "✨" : emoji;
         chicken.style.position = "fixed";
         chicken.style.left = Math.random() * 100 + "%";
         chicken.style.top = "-150px";
