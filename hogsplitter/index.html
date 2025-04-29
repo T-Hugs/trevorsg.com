@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hog Splitter Pro - Precision Stopwatch for Curling</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Container for content */
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header styles */
+      header {
+        text-align: center;
+        padding: 40px 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        color: #666;
+      }
+
+      /* Section styles */
+      section {
+        margin: 40px 0;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      section h2 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 10px;
+      }
+
+      section p {
+        margin-bottom: 15px;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      /* Image styling */
+      .product-image {
+        display: block;
+        max-width: 60%; /* Reduced size to make the image smaller */
+        height: auto;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* FAQ and Drawbacks styling */
+      .faq-item,
+      .drawback-item {
+        margin-bottom: 20px;
+      }
+
+      .faq-item strong,
+      .drawback-item strong {
+        display: block;
+        margin-bottom: 5px;
+        color: #2c3e50;
+      }
+
+      /* CTA and Contact Sections */
+      .cta,
+      .contact {
+        text-align: center;
+        background-color: #f0f5ff;
+        padding: 30px;
+      }
+
+      .cta h2,
+      .contact h2 {
+        border-bottom: none;
+      }
+
+      .contact a {
+        color: #2c3e50;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact a:hover {
+        color: #1a73e8;
+      }
+
+      /* Thanks Section */
+      .thanks {
+        text-align: center;
+      }
+      /* Footer styles */
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #fff;
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 40px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 480px) {
+        footer {
+          font-size: 0.8rem;
+          padding: 15px 0;
+        }
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        header p {
+          font-size: 1rem;
+        }
+
+        section h2 {
+          font-size: 1.5rem;
+        }
+
+        .container {
+          padding: 15px;
+        }
+
+        section {
+          padding: 20px;
+        }
+
+        .product-image {
+          max-width: 80%; /* Slightly larger on smaller screens for visibility */
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+
+        header p {
+          font-size: 0.9rem;
+        }
+
+        section h2 {
+          font-size: 1.3rem;
+        }
+
+        .product-image {
+          max-width: 90%; /* Further adjusted for very small screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Hog Splitter Pro</h1>
+        <p>The Ultimate Stopwatch Designed for Curling Precision</p>
+      </div>
+    </header>
+
+    <section id="introduction">
+      <div class="container">
+        <h2>About Hog Splitter Pro</h2>
+        <p>
+          Hog Splitter Pro is a revolutionary stopwatch crafted specifically for
+          curlers. My mission was to create a tool that meets the unique timing
+          needs of the sport with simplicity and efficiency.
+        </p>
+        <ul>
+          <li>
+            Capture <strong>back-to-hog</strong> and
+            <strong>hog-to-hog</strong> times for the same shot with just three
+            button presses.
+          </li>
+          <li>
+            Completely <strong>stateless design</strong> - no resets or modes to
+            confuse you, and no annoying alarms.
+          </li>
+          <li>
+            A <strong>large, glanceable history</strong> of times - no scrolling
+            or cycling required.
+          </li>
+        </ul>
+        <p>
+          Unlike other stopwatches on the market, Hog Splitter Pro combines all
+          these features into one elegant device.
+        </p>
+      </div>
+    </section>
+
+    <section id="prototype">
+      <div class="container">
+        <h2>The Prototype</h2>
+        <p>
+          Built using a programmable microcontroller with an e-ink display, the
+          Hog Splitter Pro prototype is housed in a custom 3D-printed ergonomic
+          design.
+        </p>
+        <img
+          src="prototype.jpg"
+          alt="Hog Splitter Pro Prototype"
+          class="product-image"
+        />
+        <h3>How It Works</h3>
+        <ul>
+          <li>
+            <strong>Single Button Control:</strong> Press either top button to
+            update the large display with the time between the two most recent
+            presses. (The two buttons function identically, provided for
+            ergonomics.)
+          </li>
+          <li>
+            <strong>History Display:</strong> View up to 6 lines of timing
+            history, split into two columns - times under 5.5 seconds (likely
+            back-to-hog) on the left, and longer times (likely hog-to-hog) on
+            the right.
+          </li>
+          <li>
+            <strong>Paired Timing:</strong> Back-to-hog and hog-to-hog times
+            from the same shot pair up on the same row for easy correlation.
+          </li>
+          <li>
+            <strong>Smart Filtering:</strong> Times over 20 seconds are shown on
+            the main display but not saved to history. Times over 30 seconds are
+            not displayed at all.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="drawbacks">
+      <div class="container">
+        <h2>Current Limitations</h2>
+        <p>
+          As a prototype developed quickly, Hog Splitter Pro has a few areas for
+          improvement:
+        </p>
+        <div class="drawback-item">
+          <strong>Battery Life:</strong>
+          <p>
+            Lasts 2.5 to 3 hours, sufficient for an 8-end game, but requires
+            recharging via USB-C before each game.
+          </p>
+        </div>
+        <div class="drawback-item">
+          <strong>Durability:</strong>
+          <p>
+            While functional after a month of use, long-term durability is
+            untested. The e-paper display may be sensitive to UV light or high
+            temperatures (e.g., in a hot car).
+          </p>
+        </div>
+        <div class="drawback-item">
+          <strong>Display Refresh:</strong>
+          <p>
+            The e-paper display refreshes only on button press, taking about
+            half a second. This has not been an issue in for play testers,
+            but some may find it bothersome.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <strong>How do you reset it?</strong>
+          <p>
+            You don't. Hog Splitter Pro is designed to be stateless with no need
+            for a reset button.
+          </p>
+        </div>
+        <div class="faq-item">
+          <strong>How long does it take to charge?</strong>
+          <p>About 2-3 hours via USB-C.</p>
+        </div>
+        <div class="faq-item">
+          <strong>How much does it cost?</strong>
+          <p>
+            Currently, it's not for sale. Parts cost approximately $40 USD per
+            unit, though this may vary with recent US-China tariffs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="thanks" class="thanks">
+      <div class="container">
+        <h2>Special Thanks</h2>
+        <p>
+          A special thank you to <strong>Derek Corbett</strong> for his
+          invaluable help with 3D CAD design and playtesting.
+        </p>
+        <p>
+          I also extend my gratitude to <strong>Drew Tingen</strong> for
+          brainstorming ideas and contributing to playtesting.
+        </p>
+      </div>
+    </section>
+
+    <section id="next-steps" class="cta">
+      <div class="container">
+        <h2>Next Steps</h2>
+        <p>
+          We're eager to partner with a curling supplies company to refine Hog
+          Splitter Pro. By moving beyond the Core Ink kit to a custom-designed
+          device, we aim to enhance battery life, durability, and overall
+          performance.
+        </p>
+        <p>
+          If you have connections in electronics manufacturing or are interested
+          in collaboration, we'd love to discuss further.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>
+          Have questions or want to collaborate? Reach out through the
+          following channels:
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:curl@tgau.me">curl@tgau.me</a>
+        </p>
+        <p>
+          <strong>Discord:</strong>
+          <a href="https://discord.com/users/trevorsg" target="_blank"
+            >@trevorsg</a
+          >
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Hugs Platforms.</p>
+      </div>
+    </footer>
+  </body>
+</html>
