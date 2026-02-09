@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hog Splitter Pro - User Guide</title>
+    <style>
+      /* Reset and base styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        color: #666;
+      }
+
+      /* Simple site nav */
+      .site-nav {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .site-nav a {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #2c3e50;
+        background: #f0f5ff;
+        border: 1px solid #d7e2ff;
+        transition:
+          transform 0.08s ease,
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .site-nav a:hover {
+        background: #e7efff;
+        color: #1a73e8;
+        transform: translateY(-1px);
+      }
+
+      .site-nav a[aria-current="page"] {
+        background: #2c3e50;
+        border-color: #2c3e50;
+        color: #fff;
+      }
+
+      /* Section styles */
+      section {
+        margin: 40px 0;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      section h2 {
+        font-size: 1.8rem;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #e0e0e0;
+        padding-bottom: 10px;
+      }
+
+      section h3 {
+        font-size: 1.25rem;
+        color: #2c3e50;
+        margin: 20px 0 12px;
+      }
+
+      section p {
+        margin-bottom: 15px;
+      }
+
+      .subtitle {
+        color: #666;
+        margin-top: -8px;
+        margin-bottom: 18px;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      ol {
+        list-style-type: decimal;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      ol li {
+        margin-bottom: 10px;
+      }
+
+      /* Table of contents */
+      .toc {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .toc a {
+        display: block;
+        padding: 14px 16px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #2c3e50;
+        border: 1px solid #e6e6e6;
+        background: #fafafa;
+        transition:
+          background 0.2s ease,
+          transform 0.08s ease;
+      }
+
+      .toc a:hover {
+        background: #f0f5ff;
+        transform: translateY(-1px);
+      }
+
+      /* Callouts */
+      .callouts {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .callout {
+        border-radius: 12px;
+        padding: 14px 16px;
+        border: 1px solid #e6e6e6;
+        background: #fafafa;
+      }
+
+      .callout strong {
+        display: block;
+        margin-bottom: 6px;
+        color: #2c3e50;
+      }
+
+      .callout--warn {
+        border-color: #ffd7d7;
+        background: #fff5f5;
+      }
+
+      .callout--tip {
+        border-color: #d7e2ff;
+        background: #f0f5ff;
+      }
+
+      /* Troubleshooting / details */
+      details {
+        border: 1px solid #e6e6e6;
+        border-radius: 12px;
+        padding: 12px 14px;
+        background: #fafafa;
+        margin-top: 12px;
+      }
+
+      details summary {
+        cursor: pointer;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      details p {
+        margin-top: 10px;
+        margin-bottom: 0;
+        color: #444;
+      }
+
+      .contact {
+        text-align: center;
+      }
+
+      .contact h2 {
+        border-bottom: none;
+      }
+
+      .contact a {
+        color: #2c3e50;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact a:hover {
+        color: #1a73e8;
+      }
+
+      .guide-fig {
+        margin: 20px 0;
+      }
+
+      .guide-fig img {
+        display: block;
+        max-width: 25%;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .guide-fig figcaption {
+        margin-top: 8px;
+        font-size: 0.95rem;
+        color: #666;
+        text-align: center;
+      }
+
+      .guide-fig--small img {
+        max-width: 17.5%;
+      }
+
+      .guide-fig--large img {
+        max-width: 50%;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #fff;
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 40px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        header p {
+          font-size: 1rem;
+        }
+
+        section h2 {
+          font-size: 1.5rem;
+        }
+
+        .container {
+          padding: 15px;
+        }
+
+        section {
+          padding: 20px;
+        }
+
+        .guide-fig img {
+          max-width: 40%;
+        }
+
+        .guide-fig--small img {
+          max-width: 28%;
+        }
+
+        .guide-fig--large img {
+          max-width: 80%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+
+        header p {
+          font-size: 0.9rem;
+        }
+
+        section h2 {
+          font-size: 1.3rem;
+        }
+
+        footer {
+          font-size: 0.8rem;
+          padding: 15px 0;
+        }
+
+        .guide-fig img {
+          max-width: 60%;
+        }
+
+        .guide-fig--small img {
+          max-width: 42%;
+        }
+
+        .guide-fig--large img {
+          max-width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Hog Splitter Pro</h1>
+        <p>User Guide</p>
+        <nav class="site-nav" aria-label="Hog Splitter Pro pages">
+          <a href="../index.html">Overview</a>
+          <a href="index.html" aria-current="page">Guide</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <figure class="guide-fig guide-fig--small">
+        <img
+          src="img/1-front-off.png"
+          alt="Hog Splitter Pro front view, unit off"
+        />
+      </figure>
+      <section id="disassembly">
+        <div class="container">
+          <h2>1. Disassembly/Assembly</h2>
+          <p>To remove the timer module from the 3D-printed housing:</p>
+          <ol>
+            <li>
+              Insert a sturdy string (shoelace works well) through the holes at
+              the bottom of the unit
+            </li>
+            <li>
+              Pry the locking tab back while pulling hard with the string,
+              applying even force straight out of the housing
+            </li>
+          </ol>
+          <p>The housing is friction-fit and can be difficult to remove.</p>
+          <p>To re-assemble the Hog Splitter Pro:</p>
+          <ol>
+            <li>
+              Insert the button pieces as shown. The orientation and layering
+              must be correct or the buttons will not work.
+              <figure class="guide-fig guide-fig--large">
+                <img src="img/2-buttons.png" alt="Top two timing buttons" />
+              </figure>
+            </li>
+            <li>
+              Insert the timer module into the housing, taking care to use the
+              correct orientation and without disturbing the buttons. When fully
+              inserted, you will hear a click as the locking tab moves into
+              place.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="charging">
+        <div class="container">
+          <h2>2. Charging &amp; Battery</h2>
+          <ul>
+            <li>
+              The Hog Splitter Pro must be fully charged before each game.
+              Unplugging a fully-charged unit right before your game is the best
+              way to ensure maximum battery life.
+            </li>
+            <li>
+              The battery life is usually 2-3 hours depending on conditions.
+            </li>
+            <li>Any 1-amp USB-C charger should work</li>
+            <li>Charging can take 3-4 hours</li>
+            <li>
+              When the unit is charging, you will see a red light near the
+              bottom of the unit
+            </li>
+            <li>
+              When the device is plugged in, it will turn on automatically. No
+              need to turn it off.
+            </li>
+          </ul>
+          <figure class="guide-fig">
+            <img
+              src="img/3-charging.png"
+              alt="Charging the unit, red light near bottom"
+            />
+          </figure>
+          <h3>Quirks:</h3>
+          <ul>
+            <li>
+              The battery percentage indicator only updates when the screen
+              updates. Therefore, it may show a percentage lower than the actual
+              charge percentage until you turn on the unit and refresh the
+              screen.
+            </li>
+            <li>
+              The battery percentage indicator is not very accurate. You may see
+              drastic fluctuations in battery percentage. You may even see the
+              percentage increase, even when it is not plugged in!
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="operation">
+        <div class="container">
+          <h2>3. Operation</h2>
+
+          <ul>
+            <li>
+              To power on, hold the button on the lower-right side of the unit
+              for about 1 second, until you see the screen start flashing. The
+              unit will boot up—this takes about 10 seconds. The stopwatch is
+              ready to use when you see 0.00 on the display.
+              <figure class="guide-fig">
+                <img
+                  src="img/4-power-btn.png"
+                  alt="Power button on lower-right side"
+                />
+              </figure>
+            </li>
+            <li>
+              To power off, push and hold the wheel-looking button on the
+              upper-right side of the unit straight in for about 1 second, until
+              you see a power off message on the screen.
+              <figure class="guide-fig">
+                <img
+                  src="img/5-wheel-btn.png"
+                  alt="Wheel button on upper-right side"
+                />
+              </figure>
+            </li>
+            <li>
+              To reset, use a pin to push the reset button on the back of the
+              unit. This may fix any quirky behavior (or it might not, good
+              luck!)
+              <figure class="guide-fig">
+                <img
+                  src="img/6-reset-btn.png"
+                  alt="Reset button on back of unit"
+                />
+              </figure>
+            </li>
+            <li>
+              To increase or decrease the beeper volume, rock the wheel-looking
+              button up or down while the unit is on. The unit will beep at the
+              new volume level.
+            </li>
+          </ul>
+
+          <h3>Timing Operation</h3>
+
+          <ul>
+            <li>
+              The top two 3D-printed buttons have the same function. The left
+              button uses a lever to actuate the physical button on the timer
+              module, so it's somewhat less reliable and might require more
+              force.
+            </li>
+            <li>
+              Each time you press one of the top buttons, the screen will
+              update. The large number display shows the number of seconds
+              between the most recent two button presses. However, the display
+              will ignore any times that are less than half a second or greater
+              than 30 seconds.
+            </li>
+            <li>
+              If a time is measured between half a second and 20 seconds, it
+              will stay in the history. The history shows 6 rows of times.
+            </li>
+            <li>
+              Any time in the history that is less than 5.5 seconds will appear
+              in the left column of the history.
+            </li>
+            <li>
+              Any time in the history that is greater than 5.5 seconds will
+              appear in the right column of the history.
+            </li>
+            <li>
+              If a time is collected which falls into the left side is followed
+              by a time which falls into the right side, then they will pair up
+              in the same row of the history. This allows the user to pair up a
+              "short time" and a "long time" for the same curling shot.
+            </li>
+            <li>
+              There is no concept of "resetting" after taking a time. Because
+              the main display always shows the time between the most recent
+              button presses, resetting is not necessary.
+            </li>
+          </ul>
+        </div>
+        <figure class="guide-fig guide-fig--small">
+          <img
+            src="img/7-front-on.png"
+            alt="Hog Splitter Pro front view, display on"
+          />
+        </figure>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2>Questions/Comments/Issues?</h2>
+          <p>Contact Trevor Gau.</p>
+          <p>
+            <strong>Phone:</strong> <a href="tel:+12813775337">281-377-5337</a>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:trevorsg@gmail.com">trevorsg@gmail.com</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Hugs Platforms.</p>
+      </div>
+    </footer>
+  </body>
+</html>

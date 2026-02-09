@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -43,6 +43,41 @@
       header p {
         font-size: 1.2rem;
         color: #666;
+      }
+
+      /* Simple site nav */
+      .site-nav {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .site-nav a {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #2c3e50;
+        background: #f0f5ff;
+        border: 1px solid #d7e2ff;
+        transition:
+          transform 0.08s ease,
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+
+      .site-nav a:hover {
+        background: #e7efff;
+        color: #1a73e8;
+        transform: translateY(-1px);
+      }
+
+      .site-nav a[aria-current="page"] {
+        background: #2c3e50;
+        border-color: #2c3e50;
+        color: #fff;
       }
 
       /* Section styles */
@@ -199,6 +234,10 @@
       <div class="container">
         <h1>Hog Splitter Pro</h1>
         <p>The Ultimate Stopwatch Designed for Curling Precision</p>
+        <nav class="site-nav" aria-label="Hog Splitter Pro pages">
+          <a href="index.html" aria-current="page">Overview</a>
+          <a href="guide/index.html">Guide</a>
+        </nav>
       </div>
     </header>
 
@@ -379,7 +418,7 @@
     </section>
     <footer>
       <div class="container">
-        <p>&copy; 2025 Hugs Platforms.</p>
+        <p>&copy; 2026 Hugs Platforms.</p>
       </div>
     </footer>
   </body>
