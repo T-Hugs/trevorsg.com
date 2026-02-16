@@ -1,1 +1,679 @@
-{"created_by":"Tampermonkey","version":"1","scripts":[{"name":"YouTube Timestamp Recorder","options":{"check_for_updates":true,"user_modified":1731517831413,"comment":null,"compatopts_for_requires":true,"compat_wrappedjsobject":false,"compat_metadata":false,"compat_foreach":false,"compat_powerful_this":null,"sandbox":null,"noframes":null,"unwrap":null,"run_at":null,"run_in":null,"tags":[],"override":{"use_includes":[],"orig_includes":[],"merge_includes":true,"use_matches":[],"orig_matches":["*://www.youtube.com/*"],"merge_matches":true,"use_excludes":[],"orig_excludes":[],"merge_excludes":true,"use_connects":[],"orig_connects":[],"merge_connects":true,"use_blockers":[],"orig_run_at":"document-idle","orig_run_in":[],"orig_noframes":null,"orig_tags":[]}},"storage":{"ts":1731516981802,"data":{}},"enabled":true,"position":1,"uuid":"8c21473f-e885-498e-b4bb-cc94cfdcaeb4","source":"Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBZb3VUdWJlIFRpbWVzdGFtcCBSZWNvcmRlcgovLyBAbmFtZXNwYWNlICAgIGh0dHA6Ly90YW1wZXJtb25rZXkubmV0LwovLyBAdmVyc2lvbiAgICAgIDEuMQovLyBAZGVzY3JpcHRpb24gIFJlY29yZHMgdGltZXN0YW1wcyBpbiBZb3VUdWJlIHZpZGVvcyB3aXRoIGEgaG90a2V5Ci8vIEBhdXRob3IgICAgICAgWW91Ci8vIEBtYXRjaCAgICAgICAgKjovL3d3dy55b3V0dWJlLmNvbS8qCi8vIEBncmFudCAgICAgICAgbm9uZQovLyA9PS9Vc2VyU2NyaXB0PT0KCihmdW5jdGlvbigpIHsKICAgICd1c2Ugc3RyaWN0JzsKCiAgICAvLyBLZXkgdG8gcHJlc3MgZm9yIHJlY29yZGluZyB0aW1lc3RhbXAKICAgIGNvbnN0IGhvdGtleSA9ICdgJzsgLy8gQ2hhbmdlIHRoaXMgdG8geW91ciBwcmVmZXJyZWQga2V5CgogICAgLy8gQXJyYXkgdG8gc3RvcmUgdGltZXN0YW1wcwogICAgbGV0IHRpbWVzdGFtcHMgPSBbXTsKCiAgICAvLyBGdW5jdGlvbiB0byBnZXQgdGhlIGN1cnJlbnQgdGltZXN0YW1wIG9mIHRoZSB2aWRlbwogICAgZnVuY3Rpb24gZ2V0VGltZXN0YW1wKCkgewogICAgICAgIGNvbnN0IHZpZGVvID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigndmlkZW8nKTsKICAgICAgICBpZiAodmlkZW8pIHsKICAgICAgICAgICAgbGV0IGN1cnJlbnRUaW1lID0gdmlkZW8uY3VycmVudFRpbWU7CiAgICAgICAgICAgIGxldCBmb3JtYXR0ZWRUaW1lID0gZm9ybWF0VGltZShjdXJyZW50VGltZSk7CiAgICAgICAgICAgIHRpbWVzdGFtcHMucHVzaChmb3JtYXR0ZWRUaW1lKTsKICAgICAgICAgICAgY29uc29sZS5sb2coIlRpbWVzdGFtcCBhZGRlZDogIiArIGZvcm1hdHRlZFRpbWUpOwogICAgICAgICAgICBkaXNwbGF5VGltZXN0YW1wcygpOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIGNvbnNvbGUubG9nKCJObyB2aWRlbyBlbGVtZW50IGZvdW5kIik7CiAgICAgICAgfQogICAgfQoKICAgIC8vIEZ1bmN0aW9uIHRvIGZvcm1hdCBzZWNvbmRzIGludG8gSEg6TU06U1MKICAgIGZ1bmN0aW9uIGZvcm1hdFRpbWUoc2Vjb25kcykgewogICAgICAgIGxldCBocnMgPSBNYXRoLmZsb29yKHNlY29uZHMgLyAzNjAwKTsKICAgICAgICBsZXQgbWlucyA9IE1hdGguZmxvb3IoKHNlY29uZHMgJSAzNjAwKSAvIDYwKTsKICAgICAgICBsZXQgc2VjcyA9IE1hdGguZmxvb3Ioc2Vjb25kcyAlIDYwKTsKICAgICAgICByZXR1cm4gKGhycyA+IDAgPyBocnMudG9TdHJpbmcoKS5wYWRTdGFydCgyLCAnMCcpICsgIjoiIDogIjA6IikgKwogICAgICAgICAgICBtaW5zLnRvU3RyaW5nKCkucGFkU3RhcnQoMiwgJzAnKSArICI6IiArCiAgICAgICAgICAgIHNlY3MudG9TdHJpbmcoKS5wYWRTdGFydCgyLCAnMCcpOwogICAgfQoKICAgIC8vIEZ1bmN0aW9uIHRvIGRpc3BsYXkgdGltZXN0YW1wcyBpbiBwYWlycyBhbmQgYWRkIGEgIkNvcHkiIGJ1dHRvbgogICAgZnVuY3Rpb24gZGlzcGxheVRpbWVzdGFtcHMoKSB7CiAgICAgICAgbGV0IGNvbnRhaW5lciA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCd0aW1lc3RhbXBDb250YWluZXInKTsKICAgICAgICBpZiAoIWNvbnRhaW5lcikgewogICAgICAgICAgICBjb250YWluZXIgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsKICAgICAgICAgICAgY29udGFpbmVyLmlkID0gJ3RpbWVzdGFtcENvbnRhaW5lcic7CiAgICAgICAgICAgIGNvbnRhaW5lci5zdHlsZS5wb3NpdGlvbiA9ICdmaXhlZCc7CiAgICAgICAgICAgIGNvbnRhaW5lci5zdHlsZS5ib3R0b20gPSAnMTBweCc7CiAgICAgICAgICAgIGNvbnRhaW5lci5zdHlsZS5yaWdodCA9ICcxMHB4JzsKICAgICAgICAgICAgY29udGFpbmVyLnN0eWxlLmJhY2tncm91bmRDb2xvciA9ICd3aGl0ZSc7CiAgICAgICAgICAgIGNvbnRhaW5lci5zdHlsZS5ib3JkZXIgPSAnMXB4IHNvbGlkIGJsYWNrJzsKICAgICAgICAgICAgY29udGFpbmVyLnN0eWxlLnBhZGRpbmcgPSAnMTBweCc7CiAgICAgICAgICAgIGNvbnRhaW5lci5zdHlsZS5tYXhIZWlnaHQgPSAnMjAwcHgnOwogICAgICAgICAgICBjb250YWluZXIuc3R5bGUub3ZlcmZsb3dZID0gJ2F1dG8nOwogICAgICAgICAgICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGNvbnRhaW5lcik7CiAgICAgICAgfQoKICAgICAgICAvLyBDbGVhciB0aGUgY29udGFpbmVyCiAgICAgICAgY29udGFpbmVyLnRleHRDb250ZW50ID0gJyc7CiAgICAgICAgY29uc3QgdGl0bGUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzdHJvbmcnKTsKICAgICAgICB0aXRsZS50ZXh0Q29udGVudCA9ICdSZWNvcmRlZCBUaW1lc3RhbXBzIChTdGFydCBcdCBFbmQpOic7CiAgICAgICAgY29udGFpbmVyLmFwcGVuZENoaWxkKHRpdGxlKTsKCiAgICAgICAgLy8gRGlzcGxheSB0aW1lc3RhbXBzIGluIHBhaXJzCiAgICAgICAgZm9yIChsZXQgaSA9IDA7IGkgPCB0aW1lc3RhbXBzLmxlbmd0aDsgaSArPSAyKSB7CiAgICAgICAgICAgIGNvbnN0IHRpbWVzdGFtcExpbmUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsKICAgICAgICAgICAgY29uc3Qgc3RhcnQgPSB0aW1lc3RhbXBzW2ldOwogICAgICAgICAgICBjb25zdCBlbmQgPSB0aW1lc3RhbXBzW2kgKyAxXSB8fCAnJzsgLy8gQWRkIGFuIGVtcHR5IGVuZCBpZiB0aGVyZSdzIGFuIG9kZCBudW1iZXIKICAgICAgICAgICAgdGltZXN0YW1wTGluZS50ZXh0Q29udGVudCA9IGAke3N0YXJ0fSAgICAke2VuZH1gOyAvLyBWaXN1YWxseSBzcGFjZWQKICAgICAgICAgICAgY29udGFpbmVyLmFwcGVuZENoaWxkKHRpbWVzdGFtcExpbmUpOwogICAgICAgIH0KCiAgICAgICAgLy8gQWRkIGEgY29weSBidXR0b24KICAgICAgICBsZXQgY29weUJ1dHRvbiA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjb3B5QnV0dG9uJyk7CiAgICAgICAgaWYgKCFjb3B5QnV0dG9uKSB7CiAgICAgICAgICAgIGNvcHlCdXR0b24gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdidXR0b24nKTsKICAgICAgICAgICAgY29weUJ1dHRvbi5pZCA9ICdjb3B5QnV0dG9uJzsKICAgICAgICAgICAgY29weUJ1dHRvbi50ZXh0Q29udGVudCA9ICdDb3B5IFRpbWVzdGFtcHMnOwogICAgICAgICAgICBjb3B5QnV0dG9uLnN0eWxlLm1hcmdpblRvcCA9ICcxMHB4JzsKICAgICAgICAgICAgY29weUJ1dHRvbi5vbmNsaWNrID0gY29weVRpbWVzdGFtcHM7CiAgICAgICAgICAgIGNvbnRhaW5lci5hcHBlbmRDaGlsZChjb3B5QnV0dG9uKTsKICAgICAgICB9CgogICAgICAgIC8vIEFkZCBhIGNsZWFyIGJ1dHRvbgogICAgICAgIGxldCBjbGVhckJ1dHRvbiA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjbGVhckJ1dHRvbicpOwogICAgICAgIGlmICghY2xlYXJCdXR0b24pIHsKICAgICAgICAgICAgY2xlYXJCdXR0b24gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdidXR0b24nKTsKICAgICAgICAgICAgY2xlYXJCdXR0b24uaWQgPSAnY2xlYXJCdXR0b24nOwogICAgICAgICAgICBjbGVhckJ1dHRvbi50ZXh0Q29udGVudCA9ICdDbGVhciBUaW1lc3RhbXBzJzsKICAgICAgICAgICAgY2xlYXJCdXR0b24uc3R5bGUubWFyZ2luVG9wID0gJzVweCc7CiAgICAgICAgICAgIGNsZWFyQnV0dG9uLm9uY2xpY2sgPSBjbGVhclRpbWVzdGFtcHM7CiAgICAgICAgICAgIGNvbnRhaW5lci5hcHBlbmRDaGlsZChjbGVhckJ1dHRvbik7CiAgICAgICAgfQogICAgfQoKICAgIC8vIEZ1bmN0aW9uIHRvIGNvcHkgdGhlIHRpbWVzdGFtcHMgYXMgdGFiLXNlcGFyYXRlZCBwYWlycwogICAgZnVuY3Rpb24gY29weVRpbWVzdGFtcHMoKSB7CiAgICAgICAgY29uc3QgdGV4dCA9IHRpbWVzdGFtcHMKICAgICAgICAucmVkdWNlKChhY2MsIHRpbWVzdGFtcCwgaW5kZXgpID0+IHsKICAgICAgICAgICAgaWYgKGluZGV4ICUgMiA9PT0gMCkgewogICAgICAgICAgICAgICAgcmV0dXJuIGFjYyArIHRpbWVzdGFtcCArICJcdCI7IC8vIFN0YXJ0IHRpbWVzdGFtcCB3aXRoIHRhYgogICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgcmV0dXJuIGFjYyArIHRpbWVzdGFtcCArICJcbiI7IC8vIEVuZCB0aW1lc3RhbXAgd2l0aCBuZXdsaW5lCiAgICAgICAgICAgIH0KICAgICAgICB9LCAiIikKICAgICAgICAudHJpbSgpOwoKICAgICAgICAvLyBDcmVhdGUgYSB0ZW1wb3JhcnkgdGV4dGFyZWEgdG8gY29weSBmcm9tCiAgICAgICAgY29uc3QgdGV4dEFyZWEgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCd0ZXh0YXJlYScpOwogICAgICAgIHRleHRBcmVhLnZhbHVlID0gdGV4dDsKICAgICAgICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKHRleHRBcmVhKTsKICAgICAgICB0ZXh0QXJlYS5zZWxlY3QoKTsKICAgICAgICBkb2N1bWVudC5leGVjQ29tbWFuZCgnY29weScpOwogICAgICAgIGRvY3VtZW50LmJvZHkucmVtb3ZlQ2hpbGQodGV4dEFyZWEpOwogICAgICAgIGFsZXJ0KCJUaW1lc3RhbXBzIGNvcGllZCB0byBjbGlwYm9hcmQhIik7CiAgICB9CgogICAgLy8gRnVuY3Rpb24gdG8gY2xlYXIgYWxsIHRpbWVzdGFtcHMKICAgIGZ1bmN0aW9uIGNsZWFyVGltZXN0YW1wcygpIHsKICAgICAgICB0aW1lc3RhbXBzID0gW107CiAgICAgICAgZGlzcGxheVRpbWVzdGFtcHMoKTsgLy8gUmVmcmVzaCB0aGUgZGlzcGxheSB0byBzaG93IGFuIGVtcHR5IGxpc3QKICAgIH0KCiAgICAvLyBFdmVudCBsaXN0ZW5lciBmb3IgdGhlIGhvdGtleQogICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGZ1bmN0aW9uKGUpIHsKICAgICAgICBpZiAoZS5rZXkgPT09IGhvdGtleSkgewogICAgICAgICAgICBnZXRUaW1lc3RhbXAoKTsKICAgICAgICB9CiAgICB9KTsKCn0pKCk7Cg=="}]}
+// ==UserScript==
+// @name         YouTube Timestamp Recorder
+// @namespace    http://tampermonkey.net/
+// @version      2.2
+// @description  Records timestamps in YouTube videos with hotkeys for spreadsheet export
+// @author       You
+// @match        *://www.youtube.com/*
+// @grant        none
+// ==/UserScript==
+
+(function () {
+  "use strict";
+
+  // ── Configuration ──────────────────────────────────────────────────
+  const HOTKEY_RECORD = "`";
+  const HOTKEY_SPLIT = "~";
+  const HOTKEY_DISMISS = "Escape";
+
+  // ── State ──────────────────────────────────────────────────────────
+  let timestamps = [];
+  let measureIdx = 0;
+  let measures = [0, 0, 0];
+
+  // ── Shadow DOM Host ────────────────────────────────────────────────
+  let shadowHost = null;
+  let shadow = null;
+
+  function ensureShadowHost() {
+    if (shadowHost && document.body.contains(shadowHost)) return;
+    shadowHost = document.createElement("div");
+    shadowHost.id = "ytts-shadow-host";
+    shadowHost.style.cssText =
+      "position:fixed;top:0;left:0;width:0;height:0;z-index:999999;" +
+      "pointer-events:none;";
+    document.body.appendChild(shadowHost);
+    shadow = shadowHost.attachShadow({ mode: "open" });
+
+    const style = document.createElement("style");
+    style.textContent = CSS_TEXT;
+    shadow.appendChild(style);
+  }
+
+  // ── All CSS (lives inside the shadow root) ─────────────────────────
+  const CSS_TEXT = `
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ytts-panel {
+      position: fixed;
+      bottom: 16px;
+      background: #1e1e1e;
+      border: 1px solid #3a3a3a;
+      border-radius: 8px;
+      z-index: 1;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 13px;
+      color: #e0e0e0;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      min-width: 270px;
+      pointer-events: auto;
+    }
+
+    .ytts-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: #2a2a2a;
+      border-bottom: 1px solid #3a3a3a;
+      user-select: none;
+    }
+
+    .ytts-panel-header strong {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ytts-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ff4e45;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 10px;
+      min-width: 20px;
+      height: 18px;
+      padding: 0 5px;
+    }
+
+    .ytts-panel-body {
+      padding: 8px 14px;
+      max-height: 220px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #3a3a3a transparent;
+    }
+
+    .ytts-panel-body::-webkit-scrollbar { width: 5px; }
+    .ytts-panel-body::-webkit-scrollbar-track { background: transparent; }
+    .ytts-panel-body::-webkit-scrollbar-thumb {
+      background: #3a3a3a;
+      border-radius: 4px;
+    }
+
+    .ytts-pair-row {
+      display: flex;
+      align-items: center;
+      padding: 4px 0;
+      border-bottom: 1px solid #2f2f2f;
+      gap: 8px;
+    }
+    .ytts-pair-row:last-child { border-bottom: none; }
+
+    .ytts-row-num {
+      color: #888;
+      font-size: 11px;
+      min-width: 18px;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .ytts-time {
+      font-family: 'Consolas', 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      padding: 2px 6px;
+      background: #2a2a2a;
+      border-radius: 4px;
+      min-width: 62px;
+      text-align: center;
+    }
+
+    .ytts-time.ytts-pending {
+      color: #666;
+      font-style: italic;
+      background: none;
+    }
+
+    .ytts-arrow { color: #666; font-size: 11px; }
+
+    .ytts-delete-btn {
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: #666;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 2px 4px;
+      border-radius: 3px;
+      line-height: 1;
+      opacity: 0;
+      transition: opacity 0.1s, color 0.1s, background 0.1s;
+    }
+    .ytts-pair-row:hover .ytts-delete-btn { opacity: 1; }
+    .ytts-delete-btn:hover {
+      color: #ff4e45;
+      background: rgba(255, 78, 69, 0.12);
+    }
+
+    .ytts-panel-footer {
+      display: flex;
+      gap: 6px;
+      padding: 10px 14px;
+      border-top: 1px solid #3a3a3a;
+      background: #2a2a2a;
+    }
+
+    .ytts-btn {
+      flex: 1;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.08s;
+      text-align: center;
+    }
+    .ytts-btn:active { transform: scale(0.97); }
+
+    .ytts-btn-copy { background: #42a5f5; color: #fff; }
+    .ytts-btn-copy:hover { background: #64b5f6; }
+
+    .ytts-btn-undo {
+      background: #1e1e1e;
+      color: #e0e0e0;
+      border: 1px solid #3a3a3a;
+      flex: 0 0 auto;
+      padding: 6px 10px;
+    }
+    .ytts-btn-undo:hover { background: #3a3a3a; }
+
+    .ytts-btn-clear { background: #ff4e45; color: #fff; }
+    .ytts-btn-clear:hover { background: #ff6b63; }
+
+    .ytts-close-btn {
+      background: none;
+      border: none;
+      color: #888;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 0 2px;
+      line-height: 1;
+      transition: color 0.1s;
+    }
+    .ytts-close-btn:hover { color: #e0e0e0; }
+
+    .ytts-empty {
+      color: #666;
+      text-align: center;
+      padding: 12px 0;
+      font-style: italic;
+      font-size: 12px;
+    }
+
+    .ytts-hotkey-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 6px 14px;
+      font-size: 11px;
+      color: #666;
+      border-top: 1px solid #3a3a3a;
+    }
+
+    .ytts-hotkey-hint kbd {
+      display: inline-block;
+      padding: 1px 5px;
+      font-family: 'Consolas', 'SF Mono', monospace;
+      font-size: 11px;
+      background: #1e1e1e;
+      border: 1px solid #3a3a3a;
+      border-radius: 3px;
+      color: #e0e0e0;
+    }
+
+    .ytts-split-value {
+      font-family: 'Consolas', 'SF Mono', 'Fira Code', monospace;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      padding: 6px 0;
+    }
+
+    .ytts-split-label {
+      font-size: 11px;
+      color: #888;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .ytts-split-pair {
+      display: flex;
+      gap: 16px;
+      padding: 8px 0;
+      justify-content: center;
+    }
+
+    .ytts-split-item { flex: 1; text-align: center; }
+
+    #ytts-timestamps-panel { right: 16px; }
+    #ytts-splits-panel { left: 16px; }
+
+    .ytts-toast {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      background: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      z-index: 2;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+    .ytts-toast.ytts-toast-show {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  `;
+
+  // ── Helpers ────────────────────────────────────────────────────────
+  function $(id) {
+    return shadow?.getElementById(id) ?? null;
+  }
+
+  function clearChildren(el) {
+    while (el.firstChild) el.removeChild(el.firstChild);
+  }
+
+  function makeHintSpan(keyText, labelText) {
+    const span = document.createElement("span");
+    const kbd = document.createElement("kbd");
+    kbd.textContent = keyText;
+    span.appendChild(kbd);
+    span.appendChild(document.createTextNode(" " + labelText));
+    return span;
+  }
+
+  // ── Toast Notification ─────────────────────────────────────────────
+  let toastTimer = null;
+
+  function showToast(message) {
+    ensureShadowHost();
+    let toast = $("ytts-toast");
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.id = "ytts-toast";
+      toast.className = "ytts-toast";
+      shadow.appendChild(toast);
+    }
+    clearTimeout(toastTimer);
+    toast.textContent = message;
+    toast.classList.add("ytts-toast-show");
+    toastTimer = setTimeout(() => {
+      toast.classList.remove("ytts-toast-show");
+    }, 800);
+  }
+
+  // ── Time Formatting ────────────────────────────────────────────────
+  function formatTime(seconds) {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = Math.floor(seconds % 60);
+    return (
+      (hrs > 0 ? hrs.toString() + ":" : "0:") +
+      mins.toString().padStart(2, "0") +
+      ":" +
+      secs.toString().padStart(2, "0")
+    );
+  }
+
+  // ── Get Video Element ──────────────────────────────────────────────
+  function getVideo() {
+    return document.querySelector("video");
+  }
+
+  // ── Record Timestamp ───────────────────────────────────────────────
+  function recordTimestamp() {
+    const video = getVideo();
+    if (!video) {
+      showToast("⚠ No video found");
+      return;
+    }
+    const formatted = formatTime(video.currentTime);
+    timestamps.push(formatted);
+    showToast("⏱ " + formatted);
+    renderTimestampPanel();
+  }
+
+  // ── Undo Last Timestamp ────────────────────────────────────────────
+  function undoTimestamp() {
+    if (timestamps.length === 0) return;
+    timestamps.pop();
+    showToast("↩ Undo");
+    renderTimestampPanel();
+  }
+
+  // ── Delete a Pair ──────────────────────────────────────────────────
+  function deletePair(pairIndex) {
+    const startIdx = pairIndex * 2;
+    const count = startIdx + 1 < timestamps.length ? 2 : 1;
+    timestamps.splice(startIdx, count);
+    renderTimestampPanel();
+  }
+
+  // ── Clear All Timestamps ───────────────────────────────────────────
+  function clearTimestamps() {
+    if (timestamps.length === 0) return;
+    timestamps = [];
+    showToast("🗑 Cleared");
+    renderTimestampPanel();
+  }
+
+  // ── Copy Timestamps ────────────────────────────────────────────────
+  function copyTimestamps() {
+    if (timestamps.length === 0) {
+      showToast("Nothing to copy");
+      return;
+    }
+    const text = timestamps
+      .reduce((acc, ts, i) => {
+        if (i % 2 === 0) return acc + ts + "\t";
+        return acc + ts + "\n";
+      }, "")
+      .trim();
+
+    navigator.clipboard
+      .writeText(text)
+      .then(() => showToast("📋 Copied!"))
+      .catch(() => {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.cssText = "position:fixed;opacity:0;";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        showToast("📋 Copied!");
+      });
+  }
+
+  // ── Render Timestamp Panel ─────────────────────────────────────────
+  function renderTimestampPanel() {
+    ensureShadowHost();
+
+    let panel = $("ytts-timestamps-panel");
+    if (!panel) {
+      panel = document.createElement("div");
+      panel.id = "ytts-timestamps-panel";
+      panel.className = "ytts-panel";
+      shadow.appendChild(panel);
+    }
+
+    const pairCount = Math.ceil(timestamps.length / 2);
+    clearChildren(panel);
+
+    // Header
+    const header = document.createElement("div");
+    header.className = "ytts-panel-header";
+
+    const titleWrap = document.createElement("strong");
+    titleWrap.textContent = "Timestamps ";
+    if (timestamps.length > 0) {
+      const badge = document.createElement("span");
+      badge.className = "ytts-badge";
+      badge.textContent = timestamps.length;
+      titleWrap.appendChild(badge);
+    }
+    header.appendChild(titleWrap);
+
+    const closeBtn = document.createElement("button");
+    closeBtn.className = "ytts-close-btn";
+    closeBtn.textContent = "✕";
+    closeBtn.title = "Hide panel (Esc)";
+    closeBtn.addEventListener("click", () => removePanel("timestamps"));
+    header.appendChild(closeBtn);
+
+    panel.appendChild(header);
+
+    // Body
+    const body = document.createElement("div");
+    body.className = "ytts-panel-body";
+
+    if (timestamps.length === 0) {
+      const empty = document.createElement("div");
+      empty.className = "ytts-empty";
+      empty.textContent = "No timestamps yet";
+      body.appendChild(empty);
+    } else {
+      for (let p = 0; p < pairCount; p++) {
+        const row = document.createElement("div");
+        row.className = "ytts-pair-row";
+
+        const rowNum = document.createElement("span");
+        rowNum.className = "ytts-row-num";
+        rowNum.textContent = (p + 1).toString();
+        row.appendChild(rowNum);
+
+        const startEl = document.createElement("span");
+        startEl.className = "ytts-time";
+        startEl.textContent = timestamps[p * 2];
+        row.appendChild(startEl);
+
+        const arrow = document.createElement("span");
+        arrow.className = "ytts-arrow";
+        arrow.textContent = "→";
+        row.appendChild(arrow);
+
+        const endEl = document.createElement("span");
+        endEl.className = "ytts-time";
+        if (timestamps[p * 2 + 1]) {
+          endEl.textContent = timestamps[p * 2 + 1];
+        } else {
+          endEl.textContent = "…";
+          endEl.classList.add("ytts-pending");
+        }
+        row.appendChild(endEl);
+
+        const delBtn = document.createElement("button");
+        delBtn.className = "ytts-delete-btn";
+        delBtn.textContent = "✕";
+        delBtn.title = "Delete this pair";
+        const idx = p;
+        delBtn.addEventListener("click", () => deletePair(idx));
+        row.appendChild(delBtn);
+
+        body.appendChild(row);
+      }
+    }
+
+    panel.appendChild(body);
+
+    // Footer
+    const footer = document.createElement("div");
+    footer.className = "ytts-panel-footer";
+
+    const undoBtn = document.createElement("button");
+    undoBtn.className = "ytts-btn ytts-btn-undo";
+    undoBtn.textContent = "↩";
+    undoBtn.title = "Undo last timestamp";
+    undoBtn.addEventListener("click", undoTimestamp);
+    footer.appendChild(undoBtn);
+
+    const copyBtn = document.createElement("button");
+    copyBtn.className = "ytts-btn ytts-btn-copy";
+    copyBtn.textContent = "Copy";
+    copyBtn.addEventListener("click", copyTimestamps);
+    footer.appendChild(copyBtn);
+
+    const clearBtn = document.createElement("button");
+    clearBtn.className = "ytts-btn ytts-btn-clear";
+    clearBtn.textContent = "Clear";
+    clearBtn.addEventListener("click", clearTimestamps);
+    footer.appendChild(clearBtn);
+
+    panel.appendChild(footer);
+
+    // Hotkey hints
+    const hints = document.createElement("div");
+    hints.className = "ytts-hotkey-hint";
+    hints.appendChild(makeHintSpan("`", "Record"));
+    hints.appendChild(makeHintSpan("~", "Split"));
+    hints.appendChild(makeHintSpan("Esc", "Hide"));
+    panel.appendChild(hints);
+
+    body.scrollTop = body.scrollHeight;
+  }
+
+  // ── Record Split ───────────────────────────────────────────────────
+  function recordSplit() {
+    const video = getVideo();
+    if (!video) {
+      showToast("⚠ No video found");
+      return;
+    }
+    measures[measureIdx] = video.currentTime;
+    measureIdx = (measureIdx + 1) % measures.length;
+    showToast("⏱ Split");
+    renderSplitsPanel();
+  }
+
+  // ── Render Splits Panel ────────────────────────────────────────────
+  function renderSplitsPanel() {
+    ensureShadowHost();
+
+    let panel = $("ytts-splits-panel");
+    if (!panel) {
+      panel = document.createElement("div");
+      panel.id = "ytts-splits-panel";
+      panel.className = "ytts-panel";
+      shadow.appendChild(panel);
+    }
+
+    clearChildren(panel);
+
+    // Header
+    const header = document.createElement("div");
+    header.className = "ytts-panel-header";
+
+    const title = document.createElement("strong");
+    title.textContent = "Split Timer";
+    header.appendChild(title);
+
+    const closeBtn = document.createElement("button");
+    closeBtn.className = "ytts-close-btn";
+    closeBtn.textContent = "✕";
+    closeBtn.title = "Hide panel (Esc)";
+    closeBtn.addEventListener("click", () => removePanel("splits"));
+    header.appendChild(closeBtn);
+
+    panel.appendChild(header);
+
+    // Body
+    const body = document.createElement("div");
+    body.className = "ytts-panel-body";
+
+    const sorted = [...measures].sort((a, b) => a - b);
+    const splitA = (sorted[2] - sorted[1]).toFixed(2);
+    const splitB = (sorted[1] - sorted[0]).toFixed(2);
+
+    const pair = document.createElement("div");
+    pair.className = "ytts-split-pair";
+
+    const itemA = document.createElement("div");
+    itemA.className = "ytts-split-item";
+    const labelA = document.createElement("div");
+    labelA.className = "ytts-split-label";
+    labelA.textContent = "Latest";
+    const valA = document.createElement("div");
+    valA.className = "ytts-split-value";
+    valA.textContent = splitA + "s";
+    itemA.appendChild(labelA);
+    itemA.appendChild(valA);
+
+    const itemB = document.createElement("div");
+    itemB.className = "ytts-split-item";
+    const labelB = document.createElement("div");
+    labelB.className = "ytts-split-label";
+    labelB.textContent = "Previous";
+    const valB = document.createElement("div");
+    valB.className = "ytts-split-value";
+    valB.textContent = splitB + "s";
+    itemB.appendChild(labelB);
+    itemB.appendChild(valB);
+
+    pair.appendChild(itemA);
+    pair.appendChild(itemB);
+    body.appendChild(pair);
+
+    panel.appendChild(body);
+
+    // Hints
+    const hints = document.createElement("div");
+    hints.className = "ytts-hotkey-hint";
+    hints.appendChild(makeHintSpan("~", "Record splits"));
+    panel.appendChild(hints);
+  }
+
+  // ── Remove Panels ─────────────────────────────────────────────────
+  function removePanel(which) {
+    if (which === "timestamps") {
+      $("ytts-timestamps-panel")?.remove();
+    } else if (which === "splits") {
+      $("ytts-splits-panel")?.remove();
+    }
+  }
+
+  function removeAllPanels() {
+    removePanel("timestamps");
+    removePanel("splits");
+  }
+
+  // ── Input Guard ────────────────────────────────────────────────────
+  function isInputFocused() {
+    const el = document.activeElement;
+    if (!el) return false;
+    const tag = el.tagName.toLowerCase();
+    return (
+      tag === "input" ||
+      tag === "textarea" ||
+      el.isContentEditable ||
+      el.getAttribute("role") === "textbox"
+    );
+  }
+
+  // ── Keyboard Handler ───────────────────────────────────────────────
+  document.addEventListener("keydown", (e) => {
+    if (isInputFocused()) return;
+
+    if (e.key === HOTKEY_RECORD) {
+      e.preventDefault();
+      recordTimestamp();
+    } else if (e.key === HOTKEY_SPLIT) {
+      e.preventDefault();
+      recordSplit();
+    } else if (e.key === HOTKEY_DISMISS) {
+      removeAllPanels();
+    }
+  });
+})();
