@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hog Splitter Pro — Connected Mode</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        background: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        text-align: center;
+        padding: 36px 0;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      }
+      header h1 {
+        font-size: 2rem;
+        color: #2c3e50;
+      }
+      header p {
+        color: #666;
+        margin-top: 8px;
+      }
+      .site-nav {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .site-nav a {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #2c3e50;
+        background: #f0f5ff;
+        border: 1px solid #d7e2ff;
+      }
+      .site-nav a:hover {
+        background: #e7efff;
+        color: #1a73e8;
+      }
+      section {
+        margin: 32px 0;
+        background: #fff;
+        padding: 28px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
+      section h2 {
+        font-size: 1.5rem;
+        color: #2c3e50;
+        margin-bottom: 16px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e8e8e8;
+      }
+      section h3 {
+        font-size: 1.15rem;
+        color: #2c3e50;
+        margin: 18px 0 10px;
+      }
+      p,
+      ul {
+        margin-bottom: 14px;
+      }
+      ul {
+        margin-left: 22px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      .screen {
+        margin: 20px auto;
+        max-width: 220px;
+        aspect-ratio: 1;
+        background: #fff;
+        border: 3px solid #1a1a1a;
+        border-radius: 4px;
+        padding: 10px 8px;
+        font-family: ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+        color: #0a0a0a;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      .screen__caption {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 10px;
+        max-width: 260px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .screen--discovery .screen__title {
+        font-weight: 700;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 16px;
+      }
+      .screen--discovery .screen__line {
+        text-align: center;
+        font-size: 11px;
+        margin-top: 10px;
+      }
+      .screen--running .screen__net {
+        font-size: 9px;
+        font-weight: 600;
+      }
+      .screen--running .screen__elapsed {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 8px 0 6px;
+        font-variant-numeric: tabular-nums;
+      }
+      .screen--running .screen__grid {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2px 6px;
+        font-size: 10px;
+        padding: 4px 2px 0;
+        align-content: start;
+        font-variant-numeric: tabular-nums;
+      }
+      .screen--running .screen__battery {
+        margin-top: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4px;
+        font-size: 9px;
+        padding-top: 6px;
+      }
+      .screen--running .battery-pct {
+        font-weight: 600;
+      }
+      .screen--running .battery-icon {
+        width: 36px;
+        height: 14px;
+        border: 2px solid #0a0a0a;
+        border-radius: 2px;
+        position: relative;
+      }
+      .screen--running .battery-icon::after {
+        content: "";
+        position: absolute;
+        right: -4px;
+        top: 4px;
+        width: 3px;
+        height: 6px;
+        background: #0a0a0a;
+        border-radius: 0 1px 1px 0;
+      }
+      .screen--running .battery-fill {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        bottom: 2px;
+        width: 55%;
+        background: #0a0a0a;
+      }
+      code {
+        font-size: 0.9em;
+        background: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      .experimental-notice {
+        background: #fff8e6;
+        border: 1px solid #e0c766;
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin: 0 0 8px;
+        color: #3d3518;
+      }
+      .experimental-notice strong:first-child {
+        color: #2c3e50;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #fff;
+        color: #666;
+        font-size: 0.9rem;
+        margin-top: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Hog Splitter Pro</h1>
+        <p>Connected Mode — multi-device timing</p>
+        <nav class="site-nav" aria-label="Site">
+          <a href="/hogsplitter">Overview</a>
+          <a href="/hogsplitter/guide">Standalone guide</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <p class="experimental-notice" role="note">
+        <strong>Experimental:</strong> Connected Mode is <strong>very experimental</strong>. Multi-unit radio timing,
+        discovery, and Chronocurl BLE integration are still being hardened; you may see crashes, dropped links, missed or
+        duplicated splits, or rough edges in the UI. For anything where timing must be dependable, use
+        <strong>standalone</strong> mode (<a href="/hogsplitter/guide">main user guide</a>) unless you are deliberately
+        testing this stack.
+      </p>
+
+      <section id="what">
+        <h2>What Connected Mode is</h2>
+        <p>
+          Connected Mode links multiple Hog Splitter Pro units (and optional Chronocurl hardware) so splits can be
+          shared over radio. One device enters Connected Mode at boot; after discovery, the main screen shows a
+          <strong>NET:</strong> line and a multi-column history grid. Treat everything below as describing work-in-progress
+          behavior that may change between firmware releases.
+        </p>
+        <ul>
+          <li>
+            <strong>Columns:</strong> Each connected peer’s split times appear in a <strong>dedicated column</strong> on
+            the Running screen—your unit’s column plus one column per remote Hog Splitter Pro.
+          </li>
+          <li>
+            <strong>Hog Splitter Pro limit:</strong> Up to <strong>four</strong> Hog Splitter Pros can take part in one
+            connected swarm (this device plus up to three peers over ESP-NOW).
+          </li>
+        </ul>
+        <p>
+          Standalone timing (single device, no radio grid) is documented in the
+          <a href="/hogsplitter/guide">main user guide</a>.
+        </p>
+      </section>
+
+      <section id="enter">
+        <h2>Entering Connected Mode at boot</h2>
+        <p>
+          Power on the unit, then <strong>hold the Split button</strong> for several seconds until the latch screen
+          appears. Release when prompted. The device stays in Connected Mode for that session.
+        </p>
+        <p>
+          If the radio stack fails to initialize, the firmware shows an error briefly and falls back to standalone
+          mode.
+        </p>
+      </section>
+
+      <section id="discovery">
+        <h2>Discovery phase</h2>
+        <p>
+          After a successful boot into Connected Mode, the device runs a short discovery window. Nearby peers are
+          counted; the screen updates about once per second with remaining time.
+        </p>
+        <div class="screen screen--discovery" role="img" aria-label="Simulated discovery screen">
+          <div class="screen__title">DISCOVERY</div>
+          <div class="screen__line">Discovery 4s</div>
+          <div class="screen__line">HSP:2 Chronocurl:1</div>
+          <div class="screen__line">Finding nearby...</div>
+        </div>
+        <p class="screen__caption">Representative discovery layout (counts and seconds are examples).</p>
+        <p>
+          While discovery is active, normal settings entry via <strong>Wheel-push</strong> is disabled.
+        </p>
+      </section>
+
+      <section id="running-ui">
+        <h2>Running — main display</h2>
+        <p>
+          After discovery completes, the UI matches the standalone timer style for the large elapsed readout, but adds
+          a peer count and a history grid where <strong>each Hog Splitter Pro in the swarm has its own column</strong>
+          (local column plus one per remote peer), up to four units total.
+        </p>
+        <div class="screen screen--running" role="img" aria-label="Simulated connected main screen">
+          <div class="screen__net">NET:3</div>
+          <div class="screen__elapsed">8.42</div>
+          <div class="screen__grid">
+            <span>2.10</span><span>2.05</span><span>2.15</span>
+            <span>3.44</span><span>—</span><span>3.50</span>
+            <span>—</span><span>4.01</span><span>—</span>
+          </div>
+          <div class="screen__battery">
+            <span class="battery-pct">72%</span>
+            <span class="battery-icon" aria-hidden="true"><span class="battery-fill"></span></span>
+          </div>
+        </div>
+        <p class="screen__caption">Example: three timers in the swarm (<code>NET:3</code>), three data columns.</p>
+        <ul>
+          <li><strong>Split button</strong>: same as standalone — records a split.</li>
+          <li>
+            <strong>Main timer precision</strong> and <strong>History precision</strong> (Settings) apply the same way as
+            standalone: the large readout uses Main timer precision; all history cells use History precision.
+          </li>
+          <li>
+            Intervals above <strong>20 seconds</strong> are not added to the on-device history in Connected Mode (same
+            20 s cap as standalone history).
+          </li>
+          <li>
+            Intervals above <strong>59 seconds</strong> still mark the interval as “too long” for the big readout (dashed
+            placeholder matching Main timer precision), same as standalone.
+          </li>
+        </ul>
+      </section>
+
+      <section id="settings">
+        <h2>Settings in Connected Mode</h2>
+        <p>
+          Once the device is in the <strong>Running</strong> phase (not during discovery), you can open settings with
+          <strong>Wheel-push</strong> from the main screen, same as standalone:
+        </p>
+        <ul>
+          <li><strong>Wheel-push</strong>: next settings page (with beep).</li>
+          <li><strong>Wheel-up</strong> / <strong>Wheel-down</strong>: adjust the current item (with beep / preview tone).</li>
+          <li><strong>Split button</strong>: save and exit settings.</li>
+        </ul>
+      </section>
+
+      <section id="chronocurl">
+        <h2>Chronocurl integration</h2>
+        <p>
+          Chronocurl gate hardware pairs with the swarm over Bluetooth LE. Discovery shows how many Chronocurls were
+          seen during the discovery window.
+        </p>
+        <ul>
+          <li>
+            <strong>Capacity:</strong> Up to <strong>four</strong> Chronocurl devices are supported per swarm.
+          </li>
+          <li>
+            <strong>Host stopwatch:</strong> One Hog Splitter Pro in the group acts as the BLE host for Chronocurls.
+            When a paired Chronocurl detects the <strong>laser beam broken</strong>, that host records a
+            <strong>split</strong>—the same timing action as pressing Split on the stopwatch (including sharing the
+            interval over radio when other Hog Splitter Pros are linked).
+          </li>
+          <li>
+            <strong>Laser cooldown:</strong> After a Chronocurl-triggered split, the laser on that Chronocurl is held
+            <strong>disabled for 5 seconds</strong> before it can produce another break event.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Hugs Platforms.</p>
+      </div>
+    </footer>
+  </body>
+</html>
